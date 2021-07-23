@@ -26,8 +26,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.backgroundColor = DefaultWhite
-        self.setUpSlidingPictures()
-        
+        self.setupWelcomeView()
     }
     
     func setUpSlidingPictures() {
@@ -42,23 +41,23 @@ class MainViewController: UIViewController {
         collectionView!.dataSource = self
         collectionView?.showsHorizontalScrollIndicator = false
         collectionView?.isPagingEnabled = true
+        collectionView?.isScrollEnabled = false
         self.view.addSubview(collectionView!)
         
         DispatchQueue.main.async {
-            self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: 2.6, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
         }
         
         collectionView!.mas_makeConstraints { (make) in
             make?.top.equalTo()(self.view)
             make?.left.equalTo()(self.view)
             make?.right.equalTo()(self.view)
-            make?.height.equalTo()(self.view.frame.height / 2)
+            make?.height.equalTo()(self.view.frame.height / 2 * 1.1)
         }
         
     }
     
     @objc func changeImage() {
-        
         if counter < imageArr.count {
             self.collectionView?.scrollToItem(at: IndexPath(item: counter, section: self.collectionView!.numberOfSections - 1), at: .centeredHorizontally, animated: true)
             counter += 1
@@ -67,6 +66,108 @@ class MainViewController: UIViewController {
             self.collectionView?.scrollToItem(at: IndexPath(item: counter, section: self.collectionView!.numberOfSections - 1), at: .centeredHorizontally, animated: true)
             counter += 1
         }
+    }
+    
+    func setupWelcomeView() {
+        self.setUpSlidingPictures()
+        let logo = UIImageView(image: UIImage(named: "FitPal_NoBg"))
+        logo.contentMode = .scaleAspectFill
+        self.view.addSubview(logo)
+        logo.mas_makeConstraints { (make) in
+            make?.top.equalTo()(self.view)?.offset()(GetStatusBarHeight())
+            make?.width.equalTo()(self.view.frame.width / 3)
+            make?.height.equalTo()(66)
+            make?.centerX.equalTo()(self.view.mas_centerX)
+        }
+        
+        let welcomeTxt = UILabel()
+        welcomeTxt.text = "Welcome"
+        welcomeTxt.textColor = DefaultWhite
+        welcomeTxt.font = FontLarge
+        self.view.addSubview(welcomeTxt)
+        
+        let detailTxt = UILabel()
+        detailTxt.text = "Join FitPal to keep your workout on track"
+        detailTxt.textColor = DefaultWhite
+        detailTxt.font = FontDetail
+        self.view.addSubview(detailTxt)
+        
+        welcomeTxt.mas_makeConstraints { (make) in
+            make?.width.equalTo()(self.view.frame.width * 0.9)
+            make?.centerX.equalTo()(self.view.mas_centerX)
+            make?.bottom.equalTo()(self.collectionView?.mas_bottom)?.offset()(-self.view.frame.height / 2 * 0.1)
+        }
+        detailTxt.mas_makeConstraints { (make) in
+            make?.width.equalTo()(self.view.frame.width * 0.9)
+            make?.centerX.equalTo()(self.view.mas_centerX)
+            make?.top.equalTo()(welcomeTxt.mas_bottom)?.offset()(10)
+        }
+        
+        let section = UIStackView()
+        section.axis = .vertical
+        section.alignment = .center
+        section.distribution = .fillEqually
+        section.spacing = 8
+        
+        let label = UILabel()
+        label.text = "Already have an account?"
+        label.font = FontSmall
+        label.textColor = LabelColor
+        
+        let loginBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithNoIconDarkMode, text: "Log In", icon: nil)
+        loginBtn.backgroundColor = DefaultBlue
+        
+        let signUpLabel = UILabel()
+        signUpLabel.text = "New to FitPal? Sign up."
+        signUpLabel.font = FontSmall
+        signUpLabel.textColor = LabelColor
+        
+        let loginFacebook = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithLeftIconLightMode, text: "Continue with Facebook", icon: UIImage(named: "Facebook"))
+        
+        let loginGoogle = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithLeftIconLightMode, text: "Continue with Google", icon: UIImage(named: "Google"))
+        
+        let loginApple = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithLeftIconLightMode, text: "Continue with Apple", icon: UIImage(named: "Apple"))
+        
+        let signUpBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithLeftIconLightMode, text: "Sign Up with Email", icon: UIImage(systemName: "envelope"))
+        
+        section.addArrangedSubview(label)
+        section.addArrangedSubview(loginBtn)
+        section.addArrangedSubview(signUpLabel)
+        section.addArrangedSubview(loginFacebook)
+        section.addArrangedSubview(loginGoogle)
+        section.addArrangedSubview(loginApple)
+        section.addArrangedSubview(signUpBtn)
+        
+        loginBtn.mas_makeConstraints { (make) in
+            make?.left.equalTo()(section)?.offset()(18)
+            make?.right.equalTo()(section)?.offset()(-18)
+        }
+        loginFacebook.mas_makeConstraints { (make) in
+            make?.left.equalTo()(section)?.offset()(18)
+            make?.right.equalTo()(section)?.offset()(-18)
+        }
+        loginGoogle.mas_makeConstraints { (make) in
+            make?.left.equalTo()(section)?.offset()(18)
+            make?.right.equalTo()(section)?.offset()(-18)
+        }
+        loginApple.mas_makeConstraints { (make) in
+            make?.left.equalTo()(section)?.offset()(18)
+            make?.right.equalTo()(section)?.offset()(-18)
+        }
+        signUpBtn.mas_makeConstraints { (make) in
+            make?.left.equalTo()(section)?.offset()(18)
+            make?.right.equalTo()(section)?.offset()(-18)
+        }
+        
+        self.view.addSubview(section)
+        section.mas_makeConstraints { (make) in
+            make?.top.equalTo()(self.collectionView?.mas_bottom)?.offset()(18)
+            make?.left.equalTo()(self.view)
+            make?.right.equalTo()(self.view)
+            make?.bottom.equalTo()(self.view)?.offset()(-40)
+        }
+        
+        
     }
     
 }

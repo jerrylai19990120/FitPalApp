@@ -10,6 +10,9 @@
 		920ED9F026AB03B600E2A19A /* UIDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9EF26AB03B600E2A19A /* UIDefinitions.swift */; };
 		920ED9F926AB107A00E2A19A /* MainViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9F826AB107A00E2A19A /* MainViewController+Extension.swift */; };
 		920EDA0026AB1B9A00E2A19A /* BackgroundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9FF26AB1B9A00E2A19A /* BackgroundCell.swift */; };
+		920EDA0326AB591900E2A19A /* StatusBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EDA0226AB591900E2A19A /* StatusBarHelper.swift */; };
+		920EDA0E26AB6E5C00E2A19A /* FPButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EDA0D26AB6E5C00E2A19A /* FPButtonFactory.swift */; };
+		920EDA1126AB705C00E2A19A /* FPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EDA1026AB705C00E2A19A /* FPButton.swift */; };
 		92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734B926A87AF100C0D21F /* AppDelegate.swift */; };
 		92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BB26A87AF100C0D21F /* SceneDelegate.swift */; };
 		92A734BE26A87AF100C0D21F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BD26A87AF100C0D21F /* MainViewController.swift */; };
@@ -25,6 +28,9 @@
 		920ED9EF26AB03B600E2A19A /* UIDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDefinitions.swift; sourceTree = "<group>"; };
 		920ED9F826AB107A00E2A19A /* MainViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Extension.swift"; sourceTree = "<group>"; };
 		920ED9FF26AB1B9A00E2A19A /* BackgroundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundCell.swift; sourceTree = "<group>"; };
+		920EDA0226AB591900E2A19A /* StatusBarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarHelper.swift; sourceTree = "<group>"; };
+		920EDA0D26AB6E5C00E2A19A /* FPButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPButtonFactory.swift; sourceTree = "<group>"; };
+		920EDA1026AB705C00E2A19A /* FPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPButton.swift; sourceTree = "<group>"; };
 		92A734B626A87AF100C0D21F /* FitPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A734B926A87AF100C0D21F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A734BB26A87AF100C0D21F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				920ED9EF26AB03B600E2A19A /* UIDefinitions.swift */,
+				920EDA0226AB591900E2A19A /* StatusBarHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -81,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				920ED9FF26AB1B9A00E2A19A /* BackgroundCell.swift */,
+				920EDA0D26AB6E5C00E2A19A /* FPButtonFactory.swift */,
+				920EDA1026AB705C00E2A19A /* FPButton.swift */,
 			);
 			path = SharedUI;
 			sourceTree = "<group>";
@@ -252,10 +261,13 @@
 			files = (
 				920ED9F026AB03B600E2A19A /* UIDefinitions.swift in Sources */,
 				920EDA0026AB1B9A00E2A19A /* BackgroundCell.swift in Sources */,
+				920EDA0E26AB6E5C00E2A19A /* FPButtonFactory.swift in Sources */,
 				92A734BE26A87AF100C0D21F /* MainViewController.swift in Sources */,
 				92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */,
 				920ED9F926AB107A00E2A19A /* MainViewController+Extension.swift in Sources */,
 				92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */,
+				920EDA0326AB591900E2A19A /* StatusBarHelper.swift in Sources */,
+				920EDA1126AB705C00E2A19A /* FPButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
