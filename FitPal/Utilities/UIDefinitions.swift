@@ -9,3 +9,4 @@ import Foundation
 import UIKit
 
 let DefaultBlue = UIColor(named: "Default_Blue")
+let DefaultWhite = UIColor(named: "Default_White")

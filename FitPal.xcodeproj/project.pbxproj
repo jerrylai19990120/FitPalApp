@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		920ED9F026AB03B600E2A19A /* UIDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9EF26AB03B600E2A19A /* UIDefinitions.swift */; };
+		920ED9F926AB107A00E2A19A /* MainViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9F826AB107A00E2A19A /* MainViewController+Extension.swift */; };
+		920EDA0026AB1B9A00E2A19A /* BackgroundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9FF26AB1B9A00E2A19A /* BackgroundCell.swift */; };
 		92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734B926A87AF100C0D21F /* AppDelegate.swift */; };
 		92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BB26A87AF100C0D21F /* SceneDelegate.swift */; };
 		92A734BE26A87AF100C0D21F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BD26A87AF100C0D21F /* MainViewController.swift */; };
@@ -21,6 +23,8 @@
 		6840FB4C271F5F6838B9D934 /* Pods-FitPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPal.release.xcconfig"; path = "Target Support Files/Pods-FitPal/Pods-FitPal.release.xcconfig"; sourceTree = "<group>"; };
 		83E11270F72B689F971BC3E0 /* Pods_FitPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		920ED9EF26AB03B600E2A19A /* UIDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDefinitions.swift; sourceTree = "<group>"; };
+		920ED9F826AB107A00E2A19A /* MainViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Extension.swift"; sourceTree = "<group>"; };
+		920ED9FF26AB1B9A00E2A19A /* BackgroundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundCell.swift; sourceTree = "<group>"; };
 		92A734B626A87AF100C0D21F /* FitPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A734B926A87AF100C0D21F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A734BB26A87AF100C0D21F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 		920ED9F626AB05DE00E2A19A /* SharedUI */ = {
 			isa = PBXGroup;
 			children = (
+				920ED9FF26AB1B9A00E2A19A /* BackgroundCell.swift */,
 			);
 			path = SharedUI;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				92A734BD26A87AF100C0D21F /* MainViewController.swift */,
+				920ED9F826AB107A00E2A19A /* MainViewController+Extension.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -245,8 +251,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				920ED9F026AB03B600E2A19A /* UIDefinitions.swift in Sources */,
+				920EDA0026AB1B9A00E2A19A /* BackgroundCell.swift in Sources */,
 				92A734BE26A87AF100C0D21F /* MainViewController.swift in Sources */,
 				92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */,
+				920ED9F926AB107A00E2A19A /* MainViewController+Extension.swift in Sources */,
 				92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
