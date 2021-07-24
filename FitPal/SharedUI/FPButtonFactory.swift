@@ -14,6 +14,8 @@ enum FPButtonStyle {
     case buttonWithLeftIconDarkMode
     case buttonWithRightIconDarkMode
     case buttonWithNoIconDarkMode
+    case buttonWithNoBorderNoIconBlue
+    case buttonWithNoBorderLeftIconBlue
 }
 
 class FPButtonFactory: NSObject {
@@ -27,9 +29,11 @@ class FPButtonFactory: NSObject {
             button.layer.cornerRadius = 3
             button.setTitle(text, for: .normal)
             button.titleLabel?.font = FontSmallTitle
-            button.setTitleColor(DefaultWhite, for: .normal)
+            button.setTitleColor(LabelColor, for: .normal)
             button.setImage(icon, for: .normal)
             button.imageView?.contentMode = .scaleAspectFit
+            button.layer.borderColor = LabelColor?.cgColor
+            button.layer.borderWidth = 1
             return button
         case .buttonWithRightIconLightMode:
             return FPButton(buttonStyle: .buttonWithRightIconLightMode)
@@ -59,6 +63,23 @@ class FPButtonFactory: NSObject {
             button.setTitle(text, for: .normal)
             button.titleLabel?.font = FontSmallTitle
             button.setTitleColor(DefaultWhite, for: .normal)
+            return button
+        case .buttonWithNoBorderNoIconBlue:
+            let button = FPButton(buttonStyle: .buttonWithNoBorderNoIconBlue)
+            button.setTitle(text, for: .normal)
+            button.titleLabel?.font = FontSmallTitle
+            button.setTitleColor(DefaultBlue, for: .normal)
+            return button
+        case .buttonWithNoBorderLeftIconBlue:
+            let button = FPButton(buttonStyle: .buttonWithNoBorderLeftIconBlue)
+            button.layer.cornerRadius = 3
+            button.setTitle(text, for: .normal)
+            button.titleLabel?.font = FontSmallTitle
+            button.setTitleColor(DefaultBlue, for: .normal)
+            let img = icon?.withRenderingMode(.alwaysTemplate)
+            button.setImage(img, for: .normal)
+            button.tintColor = DefaultBlue
+            button.imageView?.contentMode = .scaleAspectFit
             return button
         }
     }

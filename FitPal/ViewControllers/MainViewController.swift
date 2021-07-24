@@ -7,6 +7,7 @@
 
 import UIKit
 import Masonry
+import FBSDKLoginKit
 
 class MainViewController: UIViewController {
     
@@ -116,19 +117,23 @@ class MainViewController: UIViewController {
         
         let loginBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithNoIconDarkMode, text: "Log In", icon: nil)
         loginBtn.backgroundColor = DefaultBlue
+        loginBtn.addTarget(self, action: #selector(loginBtnClicked), for: .touchUpInside);
         
         let signUpLabel = UILabel()
         signUpLabel.text = "New to FitPal? Sign up."
         signUpLabel.font = FontSmall
         signUpLabel.textColor = LabelColor
         
-        let loginFacebook = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithLeftIconLightMode, text: "Continue with Facebook", icon: UIImage(named: "Facebook"))
+        let loginFacebook = FBLoginButton()
         
         let loginGoogle = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithLeftIconLightMode, text: "Continue with Google", icon: UIImage(named: "Google"))
+        loginGoogle.imageEdgeInsets = UIEdgeInsets(top: 30, left: 30, bottom: 30, right: self.view.frame.width * 0.8)
         
         let loginApple = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithLeftIconLightMode, text: "Continue with Apple", icon: UIImage(named: "Apple"))
+        loginApple.imageEdgeInsets = UIEdgeInsets(top: 55, left: 30, bottom: 55, right: self.view.frame.width * 0.8)
         
-        let signUpBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithLeftIconLightMode, text: "Sign Up with Email", icon: UIImage(systemName: "envelope"))
+        let signUpBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithLeftIconLightMode, text: "Sign Up with Email", icon: UIImage(named: "Email"))
+        signUpBtn.imageEdgeInsets = UIEdgeInsets(top: 35, left: 30, bottom: 35, right: self.view.frame.width * 0.8)
         
         section.addArrangedSubview(label)
         section.addArrangedSubview(loginBtn)
@@ -167,7 +172,12 @@ class MainViewController: UIViewController {
             make?.bottom.equalTo()(self.view)?.offset()(-40)
         }
         
-        
+    }
+    
+    @objc func loginBtnClicked() {
+        let loginVC = LoginViewController()
+        loginVC.modalPresentationStyle = .fullScreen
+        self.present(loginVC, animated: true, completion: nil)
     }
     
 }

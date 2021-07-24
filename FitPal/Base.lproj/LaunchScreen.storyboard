@@ -40,7 +40,7 @@
     <resources>
         <image name="FitPal_NoBg" width="500" height="500"/>
         <namedColor name="Default_Blue">
-            <color red="0.2196078431372549" green="0.71764705882352942" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.2199999988079071" green="0.71799999475479126" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
