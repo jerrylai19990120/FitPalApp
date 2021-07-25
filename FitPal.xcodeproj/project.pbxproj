@@ -20,6 +20,7 @@
 		92A734BE26A87AF100C0D21F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BD26A87AF100C0D21F /* MainViewController.swift */; };
 		92A734C326A87AF200C0D21F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A734C226A87AF200C0D21F /* Assets.xcassets */; };
 		92A734C626A87AF200C0D21F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A734C426A87AF200C0D21F /* LaunchScreen.storyboard */; };
+		92FEDA0326ADA3FE0045941D /* LoginViewController+TextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEDA0226ADA3FE0045941D /* LoginViewController+TextFieldExt.swift */; };
 		9FEE701F6FE1B88B785320D2 /* Pods_FitPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E11270F72B689F971BC3E0 /* Pods_FitPal.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		92A734C526A87AF200C0D21F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92A734C726A87AF200C0D21F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92FED9FC26AD8F960045941D /* FitPal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitPal.entitlements; sourceTree = "<group>"; };
+		92FEDA0226ADA3FE0045941D /* LoginViewController+TextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+TextFieldExt.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				92A734BD26A87AF100C0D21F /* MainViewController.swift */,
 				920ED9F826AB107A00E2A19A /* MainViewController+Extension.swift */,
 				926E9E2A26AC634D00279AB2 /* LoginViewController.swift */,
+				92FEDA0226ADA3FE0045941D /* LoginViewController+TextFieldExt.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				920EDA0326AB591900E2A19A /* StatusBarHelper.swift in Sources */,
 				926E9E2B26AC634D00279AB2 /* LoginViewController.swift in Sources */,
 				920EDA1126AB705C00E2A19A /* FPButton.swift in Sources */,
+				92FEDA0326ADA3FE0045941D /* LoginViewController+TextFieldExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

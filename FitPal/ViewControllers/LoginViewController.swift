@@ -17,6 +17,9 @@ class LoginViewController: UIViewController {
     var hStack: UIStackView?
     var vStackButtons: UIStackView?
     var vStackInputs: UIStackView?
+    var emailField: UITextField?
+    var passwordField: UITextField?
+    var loginBtn: FPButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,16 +36,21 @@ class LoginViewController: UIViewController {
         hStack?.spacing = self.view.frame.width * 0.1
         
         let backBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithNoBorderLeftIconBlue, text: "back", icon: UIImage(systemName: "chevron.left"))
+        backBtn.addTarget(self, action: #selector(backBtnClicked), for: .touchUpInside)
+        
         let titleLabel = UILabel()
         titleLabel.text = "Log In"
         titleLabel.textColor = DefaultBlack
         titleLabel.font = FontMainTitle
         titleLabel.textAlignment = .center
         
-        let loginBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithNoBorderNoIconBlue, text: "Log In", icon: nil)
+        loginBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithNoBorderNoIconBlue, text: "Log In", icon: nil)
+        loginBtn?.setTitleColor(DefaultDarkGray, for: .normal)
+        loginBtn?.addTarget(self, action: #selector(loginBtnClicked), for: .touchUpInside)
+        
         hStack?.addArrangedSubview(backBtn)
         hStack?.addArrangedSubview(titleLabel)
-        hStack?.addArrangedSubview(loginBtn)
+        hStack?.addArrangedSubview(loginBtn!)
         
         self.view.addSubview(hStack!)
         
@@ -111,18 +119,20 @@ class LoginViewController: UIViewController {
         vStackInputs?.distribution = .fillEqually
         vStackInputs?.spacing = 0
         
-        let emailField = UITextField()
-        emailField.placeholder = "Email"
-        emailField.borderStyle = .roundedRect
-        emailField.clearButtonMode = .whileEditing
+        emailField = UITextField()
+        emailField?.placeholder = "Email"
+        emailField?.borderStyle = .roundedRect
+        emailField?.clearButtonMode = .whileEditing
+        emailField?.delegate = self
         
-        let passwordField = UITextField()
-        passwordField.placeholder = "Password"
-        passwordField.borderStyle = .roundedRect
-        passwordField.clearButtonMode = .whileEditing
+        passwordField = UITextField()
+        passwordField?.placeholder = "Password"
+        passwordField?.borderStyle = .roundedRect
+        passwordField?.clearButtonMode = .whileEditing
+        passwordField?.delegate = self
         
-        vStackInputs?.addArrangedSubview(emailField)
-        vStackInputs?.addArrangedSubview(passwordField)
+        vStackInputs?.addArrangedSubview(emailField!)
+        vStackInputs?.addArrangedSubview(passwordField!)
         
         self.view.addSubview(vStackInputs!)
         vStackInputs?.mas_makeConstraints({ (make) in
@@ -131,16 +141,24 @@ class LoginViewController: UIViewController {
             make?.right.equalTo()(self.view)
             make?.height.equalTo()(self.view.frame.height * 0.1)
         })
-        emailField.mas_makeConstraints { (make) in
+        emailField?.mas_makeConstraints { (make) in
             make?.left.equalTo()(vStackInputs)?.offset()(18)
             make?.right.equalTo()(vStackInputs)?.offset()(-18)
         }
         
-        passwordField.mas_makeConstraints { (make) in
+        passwordField?.mas_makeConstraints { (make) in
             make?.left.equalTo()(vStackInputs)?.offset()(18)
             make?.right.equalTo()(vStackInputs)?.offset()(-18)
         }
 
+    }
+    
+    @objc func loginBtnClicked() {
+        // TODO
+    }
+    
+    @objc func backBtnClicked() {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
