@@ -42,6 +42,7 @@
 		92A734C226A87AF200C0D21F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92A734C526A87AF200C0D21F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92A734C726A87AF200C0D21F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92FED9FC26AD8F960045941D /* FitPal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitPal.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +120,7 @@
 		92A734B826A87AF100C0D21F /* FitPal */ = {
 			isa = PBXGroup;
 			children = (
+				92FED9FC26AD8F960045941D /* FitPal.entitlements */,
 				920ED9F626AB05DE00E2A19A /* SharedUI */,
 				920ED9F526AB05C800E2A19A /* Models */,
 				920ED9F326AB05A900E2A19A /* Services */,
@@ -164,6 +166,7 @@
 				92A734B326A87AF100C0D21F /* Frameworks */,
 				92A734B426A87AF100C0D21F /* Resources */,
 				24C3C38DDEB5547EA2088EF5 /* [CP] Embed Pods Frameworks */,
+				151E232AF19A9C74CB161C63 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,6 +223,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		151E232AF19A9C74CB161C63 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitPal/Pods-FitPal-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitPal/Pods-FitPal-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitPal/Pods-FitPal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		24C3C38DDEB5547EA2088EF5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -415,8 +435,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FitPal/FitPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				INFOPLIST_FILE = FitPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -436,8 +457,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FitPal/FitPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				INFOPLIST_FILE = FitPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

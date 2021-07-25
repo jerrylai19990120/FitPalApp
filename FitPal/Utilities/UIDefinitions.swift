@@ -12,6 +12,8 @@ let DefaultBlue = UIColor(named: "Default_Blue")
 let DefaultWhite = UIColor(named: "Default_White")
 let LabelColor = UIColor(named: "Label_DarkGray")
 let DefaultBlack = UIColor(named: "Default_Black")
+let DefaultLightGray = UIColor(named: "Default_LightGray")
+let DefaultDarkGray = UIColor(named: "Default_DarkGray")
 
 let FontLarge = UIFont.boldSystemFont(ofSize: 28)
 let FontMainTitle = UIFont.boldSystemFont(ofSize: 18)

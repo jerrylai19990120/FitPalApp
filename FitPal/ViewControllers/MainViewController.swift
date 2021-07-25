@@ -8,6 +8,9 @@
 import UIKit
 import Masonry
 import FBSDKLoginKit
+import Firebase
+import GoogleSignIn
+import AuthenticationServices
 
 class MainViewController: UIViewController {
     
@@ -126,14 +129,15 @@ class MainViewController: UIViewController {
         
         let loginFacebook = FBLoginButton()
         
-        let loginGoogle = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithLeftIconLightMode, text: "Continue with Google", icon: UIImage(named: "Google"))
-        loginGoogle.imageEdgeInsets = UIEdgeInsets(top: 30, left: 30, bottom: 30, right: self.view.frame.width * 0.8)
+        let loginGoogle = GIDSignInButton()
         
-        let loginApple = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithLeftIconLightMode, text: "Continue with Apple", icon: UIImage(named: "Apple"))
-        loginApple.imageEdgeInsets = UIEdgeInsets(top: 55, left: 30, bottom: 55, right: self.view.frame.width * 0.8)
+        let loginApple = ASAuthorizationAppleIDButton()
+        loginApple.addTarget(self, action: #selector(appleLoginBtnClicked), for: .touchUpInside)
         
-        let signUpBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithLeftIconLightMode, text: "Sign Up with Email", icon: UIImage(named: "Email"))
+        let signUpBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithLeftIconLightMode, text: "Sign Up with Email", icon: UIImage(systemName: "envelope")?.withRenderingMode(.alwaysTemplate))
         signUpBtn.imageEdgeInsets = UIEdgeInsets(top: 35, left: 30, bottom: 35, right: self.view.frame.width * 0.8)
+        signUpBtn.tintColor = DefaultBlack
+        
         
         section.addArrangedSubview(label)
         section.addArrangedSubview(loginBtn)
@@ -178,6 +182,10 @@ class MainViewController: UIViewController {
         let loginVC = LoginViewController()
         loginVC.modalPresentationStyle = .fullScreen
         self.present(loginVC, animated: true, completion: nil)
+    }
+    
+    @objc func appleLoginBtnClicked() {
+        
     }
     
 }
