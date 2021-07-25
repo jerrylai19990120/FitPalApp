@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension LoginViewController: UITextFieldDelegate {
+extension FPLoginViewController: UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         self.checkIfBothFieldFilled()

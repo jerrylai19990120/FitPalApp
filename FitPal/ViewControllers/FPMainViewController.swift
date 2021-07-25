@@ -12,7 +12,7 @@ import Firebase
 import GoogleSignIn
 import AuthenticationServices
 
-class MainViewController: UIViewController {
+class FPMainViewController: UIViewController {
     
     var collectionView: UICollectionView?
     var pageView: UIPageControl?
@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
-        collectionView!.register(BackgroundCell.self, forCellWithReuseIdentifier: "BackgroundCell")
+        collectionView!.register(FPBackgroundCell.self, forCellWithReuseIdentifier: "BackgroundCell")
         collectionView!.backgroundColor = DefaultWhite
         collectionView!.delegate = self
         collectionView!.dataSource = self
@@ -179,7 +179,7 @@ class MainViewController: UIViewController {
     }
     
     @objc func loginBtnClicked() {
-        let loginVC = LoginViewController()
+        let loginVC = FPLoginViewController()
         loginVC.modalPresentationStyle = .fullScreen
         self.present(loginVC, animated: true, completion: nil)
     }

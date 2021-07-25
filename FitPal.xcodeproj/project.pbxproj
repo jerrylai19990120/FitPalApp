@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		920ED9F026AB03B600E2A19A /* UIDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9EF26AB03B600E2A19A /* UIDefinitions.swift */; };
-		920ED9F926AB107A00E2A19A /* MainViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9F826AB107A00E2A19A /* MainViewController+Extension.swift */; };
-		920EDA0026AB1B9A00E2A19A /* BackgroundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9FF26AB1B9A00E2A19A /* BackgroundCell.swift */; };
-		920EDA0326AB591900E2A19A /* StatusBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EDA0226AB591900E2A19A /* StatusBarHelper.swift */; };
+		920ED9F026AB03B600E2A19A /* FPUIDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9EF26AB03B600E2A19A /* FPUIDefinitions.swift */; };
+		920ED9F926AB107A00E2A19A /* FPMainViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9F826AB107A00E2A19A /* FPMainViewController+Extension.swift */; };
+		920EDA0026AB1B9A00E2A19A /* FPBackgroundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9FF26AB1B9A00E2A19A /* FPBackgroundCell.swift */; };
+		920EDA0326AB591900E2A19A /* FPStatusBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EDA0226AB591900E2A19A /* FPStatusBarHelper.swift */; };
 		920EDA0E26AB6E5C00E2A19A /* FPButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EDA0D26AB6E5C00E2A19A /* FPButtonFactory.swift */; };
 		920EDA1126AB705C00E2A19A /* FPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EDA1026AB705C00E2A19A /* FPButton.swift */; };
 		926E9E0226AC58D500279AB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 926E9E0126AC58D500279AB2 /* GoogleService-Info.plist */; };
-		926E9E2B26AC634D00279AB2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926E9E2A26AC634D00279AB2 /* LoginViewController.swift */; };
+		926E9E2B26AC634D00279AB2 /* FPLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926E9E2A26AC634D00279AB2 /* FPLoginViewController.swift */; };
 		92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734B926A87AF100C0D21F /* AppDelegate.swift */; };
 		92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BB26A87AF100C0D21F /* SceneDelegate.swift */; };
-		92A734BE26A87AF100C0D21F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BD26A87AF100C0D21F /* MainViewController.swift */; };
+		92A734BE26A87AF100C0D21F /* FPMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BD26A87AF100C0D21F /* FPMainViewController.swift */; };
 		92A734C326A87AF200C0D21F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A734C226A87AF200C0D21F /* Assets.xcassets */; };
 		92A734C626A87AF200C0D21F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A734C426A87AF200C0D21F /* LaunchScreen.storyboard */; };
-		92FEDA0326ADA3FE0045941D /* LoginViewController+TextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEDA0226ADA3FE0045941D /* LoginViewController+TextFieldExt.swift */; };
+		92FEDA0326ADA3FE0045941D /* FPLoginViewController+TextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEDA0226ADA3FE0045941D /* FPLoginViewController+TextFieldExt.swift */; };
 		9FEE701F6FE1B88B785320D2 /* Pods_FitPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E11270F72B689F971BC3E0 /* Pods_FitPal.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,23 +28,23 @@
 		561CBDED8F2422985CBF32E2 /* Pods-FitPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPal.debug.xcconfig"; path = "Target Support Files/Pods-FitPal/Pods-FitPal.debug.xcconfig"; sourceTree = "<group>"; };
 		6840FB4C271F5F6838B9D934 /* Pods-FitPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPal.release.xcconfig"; path = "Target Support Files/Pods-FitPal/Pods-FitPal.release.xcconfig"; sourceTree = "<group>"; };
 		83E11270F72B689F971BC3E0 /* Pods_FitPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		920ED9EF26AB03B600E2A19A /* UIDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDefinitions.swift; sourceTree = "<group>"; };
-		920ED9F826AB107A00E2A19A /* MainViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Extension.swift"; sourceTree = "<group>"; };
-		920ED9FF26AB1B9A00E2A19A /* BackgroundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundCell.swift; sourceTree = "<group>"; };
-		920EDA0226AB591900E2A19A /* StatusBarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarHelper.swift; sourceTree = "<group>"; };
+		920ED9EF26AB03B600E2A19A /* FPUIDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPUIDefinitions.swift; sourceTree = "<group>"; };
+		920ED9F826AB107A00E2A19A /* FPMainViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPMainViewController+Extension.swift"; sourceTree = "<group>"; };
+		920ED9FF26AB1B9A00E2A19A /* FPBackgroundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPBackgroundCell.swift; sourceTree = "<group>"; };
+		920EDA0226AB591900E2A19A /* FPStatusBarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPStatusBarHelper.swift; sourceTree = "<group>"; };
 		920EDA0D26AB6E5C00E2A19A /* FPButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPButtonFactory.swift; sourceTree = "<group>"; };
 		920EDA1026AB705C00E2A19A /* FPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPButton.swift; sourceTree = "<group>"; };
 		926E9E0126AC58D500279AB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		926E9E2A26AC634D00279AB2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		926E9E2A26AC634D00279AB2 /* FPLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPLoginViewController.swift; sourceTree = "<group>"; };
 		92A734B626A87AF100C0D21F /* FitPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A734B926A87AF100C0D21F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A734BB26A87AF100C0D21F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		92A734BD26A87AF100C0D21F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		92A734BD26A87AF100C0D21F /* FPMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPMainViewController.swift; sourceTree = "<group>"; };
 		92A734C226A87AF200C0D21F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92A734C526A87AF200C0D21F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92A734C726A87AF200C0D21F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92FED9FC26AD8F960045941D /* FitPal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitPal.entitlements; sourceTree = "<group>"; };
-		92FEDA0226ADA3FE0045941D /* LoginViewController+TextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+TextFieldExt.swift"; sourceTree = "<group>"; };
+		92FEDA0226ADA3FE0045941D /* FPLoginViewController+TextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPLoginViewController+TextFieldExt.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +71,8 @@
 		920ED9EE26AB03A100E2A19A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				920ED9EF26AB03B600E2A19A /* UIDefinitions.swift */,
-				920EDA0226AB591900E2A19A /* StatusBarHelper.swift */,
+				920ED9EF26AB03B600E2A19A /* FPUIDefinitions.swift */,
+				920EDA0226AB591900E2A19A /* FPStatusBarHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -94,7 +94,7 @@
 		920ED9F626AB05DE00E2A19A /* SharedUI */ = {
 			isa = PBXGroup;
 			children = (
-				920ED9FF26AB1B9A00E2A19A /* BackgroundCell.swift */,
+				920ED9FF26AB1B9A00E2A19A /* FPBackgroundCell.swift */,
 				920EDA0D26AB6E5C00E2A19A /* FPButtonFactory.swift */,
 				920EDA1026AB705C00E2A19A /* FPButton.swift */,
 			);
@@ -141,10 +141,10 @@
 		92A734D126A87C9A00C0D21F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				92A734BD26A87AF100C0D21F /* MainViewController.swift */,
-				920ED9F826AB107A00E2A19A /* MainViewController+Extension.swift */,
-				926E9E2A26AC634D00279AB2 /* LoginViewController.swift */,
-				92FEDA0226ADA3FE0045941D /* LoginViewController+TextFieldExt.swift */,
+				92A734BD26A87AF100C0D21F /* FPMainViewController.swift */,
+				920ED9F826AB107A00E2A19A /* FPMainViewController+Extension.swift */,
+				926E9E2A26AC634D00279AB2 /* FPLoginViewController.swift */,
+				92FEDA0226ADA3FE0045941D /* FPLoginViewController+TextFieldExt.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -289,17 +289,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				920ED9F026AB03B600E2A19A /* UIDefinitions.swift in Sources */,
-				920EDA0026AB1B9A00E2A19A /* BackgroundCell.swift in Sources */,
+				920ED9F026AB03B600E2A19A /* FPUIDefinitions.swift in Sources */,
+				920EDA0026AB1B9A00E2A19A /* FPBackgroundCell.swift in Sources */,
 				920EDA0E26AB6E5C00E2A19A /* FPButtonFactory.swift in Sources */,
-				92A734BE26A87AF100C0D21F /* MainViewController.swift in Sources */,
+				92A734BE26A87AF100C0D21F /* FPMainViewController.swift in Sources */,
 				92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */,
-				920ED9F926AB107A00E2A19A /* MainViewController+Extension.swift in Sources */,
+				920ED9F926AB107A00E2A19A /* FPMainViewController+Extension.swift in Sources */,
 				92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */,
-				920EDA0326AB591900E2A19A /* StatusBarHelper.swift in Sources */,
-				926E9E2B26AC634D00279AB2 /* LoginViewController.swift in Sources */,
+				920EDA0326AB591900E2A19A /* FPStatusBarHelper.swift in Sources */,
+				926E9E2B26AC634D00279AB2 /* FPLoginViewController.swift in Sources */,
 				920EDA1126AB705C00E2A19A /* FPButton.swift in Sources */,
-				92FEDA0326ADA3FE0045941D /* LoginViewController+TextFieldExt.swift in Sources */,
+				92FEDA0326ADA3FE0045941D /* FPLoginViewController+TextFieldExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

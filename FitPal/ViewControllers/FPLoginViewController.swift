@@ -12,7 +12,7 @@ import Firebase
 import GoogleSignIn
 import AuthenticationServices
 
-class LoginViewController: UIViewController {
+class FPLoginViewController: UIViewController {
     
     var hStack: UIStackView?
     var vStackButtons: UIStackView?

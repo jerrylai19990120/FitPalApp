@@ -8,7 +8,7 @@
 import UIKit
 import Masonry
 
-class BackgroundCell: UICollectionViewCell {
+class FPBackgroundCell: UICollectionViewCell {
     
     let bg: UIImageView = {
         let imgView = UIImageView()
