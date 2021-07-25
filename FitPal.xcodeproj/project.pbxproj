@@ -15,12 +15,21 @@
 		920EDA1126AB705C00E2A19A /* FPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EDA1026AB705C00E2A19A /* FPButton.swift */; };
 		926E9E0226AC58D500279AB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 926E9E0126AC58D500279AB2 /* GoogleService-Info.plist */; };
 		926E9E2B26AC634D00279AB2 /* FPLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926E9E2A26AC634D00279AB2 /* FPLoginViewController.swift */; };
+		929824C926ADBF2E002C0A3F /* mineCenter.json in Resources */ = {isa = PBXBuildFile; fileRef = 929824C826ADBF2E002C0A3F /* mineCenter.json */; };
+		929824D026ADBF7B002C0A3F /* record.json in Resources */ = {isa = PBXBuildFile; fileRef = 929824CF26ADBF7B002C0A3F /* record.json */; };
+		929824D326ADE0DC002C0A3F /* FPTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824D226ADE0DC002C0A3F /* FPTabBar.swift */; };
 		92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734B926A87AF100C0D21F /* AppDelegate.swift */; };
 		92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BB26A87AF100C0D21F /* SceneDelegate.swift */; };
 		92A734BE26A87AF100C0D21F /* FPMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BD26A87AF100C0D21F /* FPMainViewController.swift */; };
 		92A734C326A87AF200C0D21F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92A734C226A87AF200C0D21F /* Assets.xcassets */; };
 		92A734C626A87AF200C0D21F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A734C426A87AF200C0D21F /* LaunchScreen.storyboard */; };
 		92FEDA0326ADA3FE0045941D /* FPLoginViewController+TextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEDA0226ADA3FE0045941D /* FPLoginViewController+TextFieldExt.swift */; };
+		92FEDA0C26ADAE870045941D /* FPFitnessCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEDA0B26ADAE870045941D /* FPFitnessCenterViewController.swift */; };
+		92FEDA0F26ADAF040045941D /* FPRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEDA0E26ADAF040045941D /* FPRecordViewController.swift */; };
+		92FEDA1226ADAF730045941D /* FPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEDA1126ADAF730045941D /* FPHomeViewController.swift */; };
+		92FEDA1526ADAF860045941D /* FPMineCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEDA1426ADAF860045941D /* FPMineCenterViewController.swift */; };
+		92FEDA1826ADB0E50045941D /* FPFitnessCenterViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEDA1726ADB0E50045941D /* FPFitnessCenterViewController+Ext.swift */; };
+		92FEDA3326ADB9FE0045941D /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = 92FEDA3226ADB9FE0045941D /* home.json */; };
 		9FEE701F6FE1B88B785320D2 /* Pods_FitPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E11270F72B689F971BC3E0 /* Pods_FitPal.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +45,9 @@
 		920EDA1026AB705C00E2A19A /* FPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPButton.swift; sourceTree = "<group>"; };
 		926E9E0126AC58D500279AB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		926E9E2A26AC634D00279AB2 /* FPLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPLoginViewController.swift; sourceTree = "<group>"; };
+		929824C826ADBF2E002C0A3F /* mineCenter.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mineCenter.json; sourceTree = "<group>"; };
+		929824CF26ADBF7B002C0A3F /* record.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = record.json; sourceTree = "<group>"; };
+		929824D226ADE0DC002C0A3F /* FPTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPTabBar.swift; sourceTree = "<group>"; };
 		92A734B626A87AF100C0D21F /* FitPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A734B926A87AF100C0D21F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A734BB26A87AF100C0D21F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +57,12 @@
 		92A734C726A87AF200C0D21F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92FED9FC26AD8F960045941D /* FitPal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitPal.entitlements; sourceTree = "<group>"; };
 		92FEDA0226ADA3FE0045941D /* FPLoginViewController+TextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPLoginViewController+TextFieldExt.swift"; sourceTree = "<group>"; };
+		92FEDA0B26ADAE870045941D /* FPFitnessCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFitnessCenterViewController.swift; sourceTree = "<group>"; };
+		92FEDA0E26ADAF040045941D /* FPRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPRecordViewController.swift; sourceTree = "<group>"; };
+		92FEDA1126ADAF730045941D /* FPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPHomeViewController.swift; sourceTree = "<group>"; };
+		92FEDA1426ADAF860045941D /* FPMineCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPMineCenterViewController.swift; sourceTree = "<group>"; };
+		92FEDA1726ADB0E50045941D /* FPFitnessCenterViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPFitnessCenterViewController+Ext.swift"; sourceTree = "<group>"; };
+		92FEDA3226ADB9FE0045941D /* home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +115,7 @@
 				920ED9FF26AB1B9A00E2A19A /* FPBackgroundCell.swift */,
 				920EDA0D26AB6E5C00E2A19A /* FPButtonFactory.swift */,
 				920EDA1026AB705C00E2A19A /* FPButton.swift */,
+				929824D226ADE0DC002C0A3F /* FPTabBar.swift */,
 			);
 			path = SharedUI;
 			sourceTree = "<group>";
@@ -122,6 +141,7 @@
 		92A734B826A87AF100C0D21F /* FitPal */ = {
 			isa = PBXGroup;
 			children = (
+				92FEDA3526ADBB240045941D /* LottieAnimations */,
 				92FED9FC26AD8F960045941D /* FitPal.entitlements */,
 				920ED9F626AB05DE00E2A19A /* SharedUI */,
 				920ED9F526AB05C800E2A19A /* Models */,
@@ -145,8 +165,23 @@
 				920ED9F826AB107A00E2A19A /* FPMainViewController+Extension.swift */,
 				926E9E2A26AC634D00279AB2 /* FPLoginViewController.swift */,
 				92FEDA0226ADA3FE0045941D /* FPLoginViewController+TextFieldExt.swift */,
+				92FEDA0B26ADAE870045941D /* FPFitnessCenterViewController.swift */,
+				92FEDA0E26ADAF040045941D /* FPRecordViewController.swift */,
+				92FEDA1126ADAF730045941D /* FPHomeViewController.swift */,
+				92FEDA1426ADAF860045941D /* FPMineCenterViewController.swift */,
+				92FEDA1726ADB0E50045941D /* FPFitnessCenterViewController+Ext.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		92FEDA3526ADBB240045941D /* LottieAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				92FEDA3226ADB9FE0045941D /* home.json */,
+				929824CF26ADBF7B002C0A3F /* record.json */,
+				929824C826ADBF2E002C0A3F /* mineCenter.json */,
+			);
+			path = LottieAnimations;
 			sourceTree = "<group>";
 		};
 		B33F20CA538055AA427CC0D9 /* Frameworks */ = {
@@ -217,9 +252,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929824D026ADBF7B002C0A3F /* record.json in Resources */,
 				92A734C626A87AF200C0D21F /* LaunchScreen.storyboard in Resources */,
 				926E9E0226AC58D500279AB2 /* GoogleService-Info.plist in Resources */,
+				92FEDA3326ADB9FE0045941D /* home.json in Resources */,
 				92A734C326A87AF200C0D21F /* Assets.xcassets in Resources */,
+				929824C926ADBF2E002C0A3F /* mineCenter.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,17 +327,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92FEDA1826ADB0E50045941D /* FPFitnessCenterViewController+Ext.swift in Sources */,
 				920ED9F026AB03B600E2A19A /* FPUIDefinitions.swift in Sources */,
 				920EDA0026AB1B9A00E2A19A /* FPBackgroundCell.swift in Sources */,
 				920EDA0E26AB6E5C00E2A19A /* FPButtonFactory.swift in Sources */,
+				92FEDA1526ADAF860045941D /* FPMineCenterViewController.swift in Sources */,
+				92FEDA1226ADAF730045941D /* FPHomeViewController.swift in Sources */,
 				92A734BE26A87AF100C0D21F /* FPMainViewController.swift in Sources */,
+				929824D326ADE0DC002C0A3F /* FPTabBar.swift in Sources */,
 				92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */,
 				920ED9F926AB107A00E2A19A /* FPMainViewController+Extension.swift in Sources */,
 				92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */,
 				920EDA0326AB591900E2A19A /* FPStatusBarHelper.swift in Sources */,
+				92FEDA0C26ADAE870045941D /* FPFitnessCenterViewController.swift in Sources */,
 				926E9E2B26AC634D00279AB2 /* FPLoginViewController.swift in Sources */,
 				920EDA1126AB705C00E2A19A /* FPButton.swift in Sources */,
 				92FEDA0326ADA3FE0045941D /* FPLoginViewController+TextFieldExt.swift in Sources */,
+				92FEDA0F26ADAF040045941D /* FPRecordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

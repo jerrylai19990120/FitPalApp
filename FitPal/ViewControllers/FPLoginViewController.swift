@@ -154,7 +154,9 @@ class FPLoginViewController: UIViewController {
     }
     
     @objc func loginBtnClicked() {
-        // TODO
+        let fitnessCenterVC = FPFitnessCenterViewController()
+        fitnessCenterVC.modalPresentationStyle = .fullScreen
+        self.present(fitnessCenterVC, animated: true, completion: nil)
     }
     
     @objc func backBtnClicked() {
