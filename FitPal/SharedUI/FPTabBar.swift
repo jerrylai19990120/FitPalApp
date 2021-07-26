@@ -18,6 +18,7 @@ class FPTabBar: UITabBar {
     var homeLabel: UILabel?
     var recordLabel: UILabel?
     var mineLabel: UILabel?
+    var didLoad = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,9 +30,13 @@ class FPTabBar: UITabBar {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        for index in 0..<self.items!.count {
-            self.setupAnimationView(index: index)
+        if !didLoad {
+            didLoad = true
+            for index in 0..<self.items!.count {
+                self.setupAnimationView(index: index)
+            }
         }
+        
     }
     
     func gettabBarButtonsArray() -> [UIView] {
