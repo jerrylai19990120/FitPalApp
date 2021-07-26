@@ -11,11 +11,11 @@ class FPRecordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        self.setupViews()
     }
     
-
-    
+    func setupViews() {
+        self.view.backgroundColor = DefaultWhite
+    }
 
 }

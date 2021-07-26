@@ -17,6 +17,9 @@ class FPFitnessCenterViewController: UITabBarController {
     
     func setupViews() {
         
+        //Substitute tab bar
+        setValue(FPTabBar(frame: tabBar.frame), forKey: "tabBar")
+        
         //Set up tab bar
         let appearance = UITabBarAppearance()
         appearance.backgroundColor = .white
@@ -25,34 +28,25 @@ class FPFitnessCenterViewController: UITabBarController {
         tabBar.standardAppearance = appearance
         tabBar.isTranslucent = false
         
-        /*// Create Animation object
-        let jsonName = "home"
-        let animation = Animation.named(jsonName)
-
-        // Load animation to AnimationView
-        let animationView = AnimationView(animation: animation)
-        animationView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-        animationView.loopMode = .loop
-
-        // Add animationView as subview
-        self.view.addSubview(animationView)
-
-        // Play the animation
-        animationView.play()*/
-        
         // Create Tab one
-        let tabOne = FPHomeViewController()
-        let tabOneBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "envelope"), selectedImage: UIImage(systemName: "envelope"))
+        let homeTab = FPHomeViewController()
+        let homeTabBarItem = UITabBarItem(title: "", image: UIImage(), selectedImage: UIImage())
         
-        tabOne.tabBarItem = tabOneBarItem
+        homeTab.tabBarItem = homeTabBarItem
         
         // Create Tab two
-        let tabTwo = FPMineCenterViewController()
-        let tabTwoBarItem2 = UITabBarItem(title: "You", image: UIImage(systemName: "envelope"), selectedImage: UIImage(systemName: "envelope"))
+        let recordTab = FPRecordViewController()
+        let recordTabBarItem = UITabBarItem(title: "", image: UIImage(), selectedImage: UIImage())
             
-        tabTwo.tabBarItem = tabTwoBarItem2
+        recordTab.tabBarItem = recordTabBarItem
         
-        self.viewControllers = [tabOne, tabTwo]
+        // Create Tab three
+        let mineTab = FPMineCenterViewController()
+        let mineTabBarItem = UITabBarItem(title: "", image: UIImage(), selectedImage: UIImage())
+            
+        mineTab.tabBarItem = mineTabBarItem
+        
+        self.viewControllers = [homeTab, recordTab, mineTab]
         
     }
 }

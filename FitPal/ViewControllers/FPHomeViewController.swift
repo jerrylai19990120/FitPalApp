@@ -15,7 +15,7 @@ class FPHomeViewController: UINavigationController {
     }
     
     func setupViews() {
-        self.view.backgroundColor = DefaultWhite
+        self.view.backgroundColor = DefaultDarkGray
     }
 
 }

@@ -15,6 +15,6 @@ class FPMineCenterViewController: UINavigationController {
     }
     
     func setupViews() {
-        self.view.backgroundColor = DefaultWhite
+        self.view.backgroundColor = DefaultBlue
     }
 }
