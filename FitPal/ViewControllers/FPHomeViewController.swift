@@ -11,11 +11,7 @@ class FPHomeViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupViews()
-    }
-    
-    func setupViews() {
-        self.view.backgroundColor = DefaultDarkGray
+        self.viewControllers = [FPHomeActivitiesViewController()]
     }
 
 }

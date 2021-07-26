@@ -15,6 +15,9 @@ class FPTabBar: UITabBar {
     var homeAnimationView: AnimationView?
     var recordAnimationView: AnimationView?
     var mineAnimationView: AnimationView?
+    var homeLabel: UILabel?
+    var recordLabel: UILabel?
+    var mineLabel: UILabel?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -75,8 +78,20 @@ class FPTabBar: UITabBar {
                 make?.centerY.equalTo()(tabBarButton)?.offset()(4)
             }
             
+            //Set up tab label
+            homeLabel = UILabel()
+            homeLabel?.text = "Home"
+            homeLabel?.textColor = DefaultTabColor
+            homeLabel?.font = FontTiny
+            tabBarButton.addSubview(homeLabel!)
+            homeLabel?.mas_makeConstraints({ (make) in
+                make?.top.equalTo()(homeAnimationView?.mas_bottom)?.offset()(-20)
+                make?.centerX.equalTo()(homeAnimationView?.mas_centerX)
+            })
+            
             if tabBarItem == self.selectedItem {
                 homeAnimationView?.play()
+                homeLabel?.textColor = DefaultBlue
             }
         } else if index == 1 {
             // Load animation to AnimationView
@@ -97,8 +112,19 @@ class FPTabBar: UITabBar {
                 make?.centerY.equalTo()(tabBarButton)?.offset()(4)
             }
             
+            recordLabel = UILabel()
+            recordLabel?.text = "Record"
+            recordLabel?.textColor = DefaultTabColor
+            recordLabel?.font = FontTiny
+            tabBarButton.addSubview(recordLabel!)
+            recordLabel?.mas_makeConstraints({ (make) in
+                make?.top.equalTo()(recordAnimationView?.mas_bottom)?.offset()(-20)
+                make?.centerX.equalTo()(recordAnimationView?.mas_centerX)
+            })
+            
             if tabBarItem == self.selectedItem {
                 recordAnimationView?.play()
+                recordLabel?.textColor = DefaultBlue
             }
         } else if index == 2 {
             // Load animation to AnimationView
@@ -119,8 +145,19 @@ class FPTabBar: UITabBar {
                 make?.centerY.equalTo()(tabBarButton)?.offset()(4)
             }
             
+            mineLabel = UILabel()
+            mineLabel?.text = "You"
+            mineLabel?.textColor = DefaultTabColor
+            mineLabel?.font = FontTiny
+            tabBarButton.addSubview(mineLabel!)
+            mineLabel?.mas_makeConstraints({ (make) in
+                make?.top.equalTo()(mineAnimationView?.mas_bottom)?.offset()(-20)
+                make?.centerX.equalTo()(mineAnimationView?.mas_centerX)?.offset()(-1)
+            })
+            
             if tabBarItem == self.selectedItem {
                 mineAnimationView?.play()
+                mineLabel?.textColor = DefaultBlue
             }
         }
         

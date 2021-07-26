@@ -15,19 +15,28 @@ extension FPFitnessCenterViewController: UITabBarControllerDelegate {
         if let fptabbar = tabBar as? FPTabBar {
             switch item.tag {
             case 0:
-                fptabbar.homeAnimationView?.play()
+                fptabbar.homeAnimationView?.play(toProgress: 1)
                 fptabbar.recordAnimationView?.play(toFrame: 0)
                 fptabbar.mineAnimationView?.play(toFrame: 0)
+                fptabbar.homeLabel?.textColor = DefaultBlue
+                fptabbar.recordLabel?.textColor = DefaultTabColor
+                fptabbar.mineLabel?.textColor = DefaultTabColor
                 break
             case 1:
-                fptabbar.recordAnimationView?.play()
+                fptabbar.recordAnimationView?.play(toProgress: 1)
                 fptabbar.homeAnimationView?.play(toFrame: 0)
                 fptabbar.mineAnimationView?.play(toFrame: 0)
+                fptabbar.homeLabel?.textColor = DefaultTabColor
+                fptabbar.recordLabel?.textColor = DefaultRed
+                fptabbar.mineLabel?.textColor = DefaultTabColor
                 break
             case 2:
-                fptabbar.mineAnimationView?.play()
+                fptabbar.mineAnimationView?.play(toProgress: 1)
                 fptabbar.recordAnimationView?.play(toFrame: 0)
                 fptabbar.homeAnimationView?.play(toFrame: 0)
+                fptabbar.homeLabel?.textColor = DefaultTabColor
+                fptabbar.recordLabel?.textColor = DefaultTabColor
+                fptabbar.mineLabel?.textColor = DefaultBlue
                 break
             default:
                 break

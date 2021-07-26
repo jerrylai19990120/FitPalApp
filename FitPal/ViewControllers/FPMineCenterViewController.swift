@@ -11,10 +11,7 @@ class FPMineCenterViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupViews()
+        self.viewControllers = [FPMineInfoViewController()]
     }
     
-    func setupViews() {
-        self.view.backgroundColor = DefaultBlue
-    }
 }
