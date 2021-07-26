@@ -15,28 +15,34 @@ extension FPFitnessCenterViewController: UITabBarControllerDelegate {
         if let fptabbar = tabBar as? FPTabBar {
             switch item.tag {
             case 0:
-                fptabbar.homeAnimationView?.play(toProgress: 1)
-                fptabbar.recordAnimationView?.play(toFrame: 0)
-                fptabbar.mineAnimationView?.play(toFrame: 0)
+                fptabbar.recordAnimationView?.stop()
+                fptabbar.mineAnimationView?.stop()
+                fptabbar.recordAnimationView?.currentFrame = 0
+                fptabbar.mineAnimationView?.currentFrame = 0
                 fptabbar.homeLabel?.textColor = DefaultBlue
                 fptabbar.recordLabel?.textColor = DefaultTabColor
                 fptabbar.mineLabel?.textColor = DefaultTabColor
+                fptabbar.homeAnimationView?.play(fromProgress: 0, toProgress: 1, loopMode: .playOnce, completion: nil)
                 break
             case 1:
-                fptabbar.recordAnimationView?.play(toProgress: 1)
-                fptabbar.homeAnimationView?.play(toFrame: 0)
-                fptabbar.mineAnimationView?.play(toFrame: 0)
+                fptabbar.homeAnimationView?.stop()
+                fptabbar.mineAnimationView?.stop()
+                fptabbar.homeAnimationView?.currentFrame = 0
+                fptabbar.mineAnimationView?.currentFrame = 0
                 fptabbar.homeLabel?.textColor = DefaultTabColor
                 fptabbar.recordLabel?.textColor = DefaultRed
                 fptabbar.mineLabel?.textColor = DefaultTabColor
+                fptabbar.recordAnimationView?.play(fromProgress: 0, toProgress: 1, loopMode: .playOnce, completion: nil)
                 break
             case 2:
-                fptabbar.mineAnimationView?.play(toProgress: 1)
-                fptabbar.recordAnimationView?.play(toFrame: 0)
-                fptabbar.homeAnimationView?.play(toFrame: 0)
+                fptabbar.recordAnimationView?.stop()
+                fptabbar.homeAnimationView?.stop()
+                fptabbar.recordAnimationView?.currentFrame = 0
+                fptabbar.homeAnimationView?.currentFrame = 0
                 fptabbar.homeLabel?.textColor = DefaultTabColor
                 fptabbar.recordLabel?.textColor = DefaultTabColor
                 fptabbar.mineLabel?.textColor = DefaultBlue
+                fptabbar.mineAnimationView?.play(fromProgress: 0, toProgress: 1, loopMode: .playOnce, completion: nil)
                 break
             default:
                 break

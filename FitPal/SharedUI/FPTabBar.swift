@@ -62,8 +62,9 @@ class FPTabBar: UITabBar {
         if index == 0 {
             // Load animation to AnimationView
             homeAnimationView = AnimationView(animation: animation)
-            homeAnimationView?.loopMode = .playOnce
             homeAnimationView?.isUserInteractionEnabled = false
+            homeAnimationView?.loopMode = .playOnce
+            homeAnimationView?.animationSpeed = 1.6
 
             // Add animationView as subview
             tabBarButton.addSubview(homeAnimationView!)
@@ -98,6 +99,7 @@ class FPTabBar: UITabBar {
             recordAnimationView = AnimationView(animation: animation)
             recordAnimationView?.loopMode = .playOnce
             recordAnimationView?.isUserInteractionEnabled = false
+            recordAnimationView?.animationSpeed = 1.6
 
             // Add animationView as subview
             tabBarButton.addSubview(recordAnimationView!)
@@ -131,6 +133,7 @@ class FPTabBar: UITabBar {
             mineAnimationView = AnimationView(animation: animation)
             mineAnimationView?.loopMode = .playOnce
             mineAnimationView?.isUserInteractionEnabled = false
+            mineAnimationView?.animationSpeed = 1.6
 
             // Add animationView as subview
             tabBarButton.addSubview(mineAnimationView!)
