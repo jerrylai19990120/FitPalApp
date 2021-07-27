@@ -23,6 +23,7 @@
 		929824DD26AF1818002C0A3F /* FPRecordViewController+MapExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824DC26AF1818002C0A3F /* FPRecordViewController+MapExt.swift */; };
 		929824E226AF8666002C0A3F /* FPActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824E126AF8666002C0A3F /* FPActivityCell.swift */; };
 		929824E526AF86BE002C0A3F /* FPHomeActivitiesViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824E426AF86BE002C0A3F /* FPHomeActivitiesViewController+Ext.swift */; };
+		929824E826B04091002C0A3F /* FPFeedStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824E726B04091002C0A3F /* FPFeedStatusView.swift */; };
 		92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734B926A87AF100C0D21F /* AppDelegate.swift */; };
 		92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BB26A87AF100C0D21F /* SceneDelegate.swift */; };
 		92A734BE26A87AF100C0D21F /* FPMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BD26A87AF100C0D21F /* FPMainViewController.swift */; };
@@ -58,6 +59,7 @@
 		929824DC26AF1818002C0A3F /* FPRecordViewController+MapExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPRecordViewController+MapExt.swift"; sourceTree = "<group>"; };
 		929824E126AF8666002C0A3F /* FPActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPActivityCell.swift; sourceTree = "<group>"; };
 		929824E426AF86BE002C0A3F /* FPHomeActivitiesViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPHomeActivitiesViewController+Ext.swift"; sourceTree = "<group>"; };
+		929824E726B04091002C0A3F /* FPFeedStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFeedStatusView.swift; sourceTree = "<group>"; };
 		92A734B626A87AF100C0D21F /* FitPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A734B926A87AF100C0D21F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A734BB26A87AF100C0D21F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				920EDA1026AB705C00E2A19A /* FPButton.swift */,
 				929824D226ADE0DC002C0A3F /* FPTabBar.swift */,
 				929824E126AF8666002C0A3F /* FPActivityCell.swift */,
+				929824E726B04091002C0A3F /* FPFeedStatusView.swift */,
 			);
 			path = SharedUI;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			files = (
 				929824DD26AF1818002C0A3F /* FPRecordViewController+MapExt.swift in Sources */,
 				929824DA26AF1216002C0A3F /* FPMineInfoViewController.swift in Sources */,
+				929824E826B04091002C0A3F /* FPFeedStatusView.swift in Sources */,
 				92FEDA1826ADB0E50045941D /* FPFitnessCenterViewController+Ext.swift in Sources */,
 				920ED9F026AB03B600E2A19A /* FPUIDefinitions.swift in Sources */,
 				929824E226AF8666002C0A3F /* FPActivityCell.swift in Sources */,

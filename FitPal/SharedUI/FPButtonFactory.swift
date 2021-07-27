@@ -95,8 +95,10 @@ class FPButtonFactory: NSObject {
             button.setTitleColor(DefaultDarkGray, for: .normal)
             return button
         case .buttonWithOnlyIcon:
-            let button = FPButton(buttonStyle: .buttonWithNoBorderNoIconBlue)
-            button.setImage(icon, for: .normal)
+            let button = FPButton(buttonStyle: .buttonWithOnlyIcon)
+            let img = icon?.withRenderingMode(.alwaysTemplate)
+            button.setImage(img, for: .normal)
+            button.tintColor = DefaultBlack
             return button
         }
     }
