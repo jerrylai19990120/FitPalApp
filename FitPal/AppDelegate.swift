@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             didFinishLaunchingWithOptions: launchOptions
         )
         FirebaseApp.configure()
+        UINavigationBar.appearance().tintColor = DefaultBlue
         return true
     }
           

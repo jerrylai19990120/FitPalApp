@@ -10,6 +10,9 @@ import UIKit
 class FPHomeActivitiesViewController: UIViewController {
     
     var collectionView: UICollectionView?
+    var friendBtn: UIBarButtonItem?
+    var addBtn: UIBarButtonItem?
+    var settingsBtn: UIBarButtonItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,13 @@ class FPHomeActivitiesViewController: UIViewController {
         self.navigationItem.title = "Home"
         self.navigationController?.navigationBar.barTintColor = DefaultWhite
         
+        addBtn = UIBarButtonItem(image: UIImage(systemName: "plus.circle"), style: .plain, target: self, action: nil)
+        friendBtn = UIBarButtonItem(image: UIImage(systemName: "person.2"), style: .plain, target: self, action: nil)
+        settingsBtn = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: nil)
+        
+        self.navigationItem.leftBarButtonItems = [addBtn!, friendBtn!]
+        self.navigationItem.rightBarButtonItem = settingsBtn!
+        
         //Set up activity feed
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -28,6 +38,7 @@ class FPHomeActivitiesViewController: UIViewController {
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
         collectionView!.register(FPActivityCell.self, forCellWithReuseIdentifier: "ActivityCell")
         collectionView!.backgroundColor = DefaultLightGray
+        collectionView?.showsVerticalScrollIndicator = false
         collectionView?.delegate = self
         collectionView?.dataSource = self
         

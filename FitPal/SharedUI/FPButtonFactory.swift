@@ -18,6 +18,7 @@ enum FPButtonStyle {
     case buttonWithNoBorderLeftIconBlue
     case buttonWithUnderlinedTextNoBorder
     case buttonWithOnlyIcon
+    case buttonWithNoBorderNoIconBlack
 }
 
 class FPButtonFactory: NSObject {
@@ -99,6 +100,12 @@ class FPButtonFactory: NSObject {
             let img = icon?.withRenderingMode(.alwaysTemplate)
             button.setImage(img, for: .normal)
             button.tintColor = DefaultBlack
+            return button
+        case .buttonWithNoBorderNoIconBlack:
+            let button = FPButton(buttonStyle: .buttonWithNoBorderNoIconBlack)
+            button.setTitle(text, for: .normal)
+            button.titleLabel?.font = FontMainThin
+            button.setTitleColor(DefaultBlack, for: .normal)
             return button
         }
     }

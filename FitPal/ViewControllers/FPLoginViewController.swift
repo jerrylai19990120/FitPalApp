@@ -46,6 +46,7 @@ class FPLoginViewController: UIViewController {
         
         loginBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithNoBorderNoIconBlue, text: "Log In", icon: nil)
         loginBtn?.setTitleColor(DefaultDarkGray, for: .normal)
+        loginBtn?.isEnabled = false
         loginBtn?.addTarget(self, action: #selector(loginBtnClicked), for: .touchUpInside)
         
         hStack?.addArrangedSubview(backBtn)
