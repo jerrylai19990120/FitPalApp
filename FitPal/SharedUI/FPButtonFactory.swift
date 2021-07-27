@@ -17,13 +17,14 @@ enum FPButtonStyle {
     case buttonWithNoBorderNoIconBlue
     case buttonWithNoBorderLeftIconBlue
     case buttonWithUnderlinedTextNoBorder
+    case buttonWithOnlyIcon
 }
 
 class FPButtonFactory: NSObject {
     
     static let sharedInstance = FPButtonFactory()
 
-    func buttonWithStyle(buttonStyle: FPButtonStyle, text: String, icon: UIImage?) -> FPButton {
+    func buttonWithStyle(buttonStyle: FPButtonStyle, text: String?, icon: UIImage?) -> FPButton {
         switch buttonStyle {
         case .buttonWithLeftIconLightMode:
             let button = FPButton(buttonStyle: .buttonWithNoIconDarkMode)
@@ -84,7 +85,7 @@ class FPButtonFactory: NSObject {
             return button
         case .buttonWithUnderlinedTextNoBorder:
             let button = FPButton(buttonStyle: .buttonWithUnderlinedTextNoBorder)
-            let attrTitle = NSMutableAttributedString(string: text, attributes: [
+            let attrTitle = NSMutableAttributedString(string: text!, attributes: [
                 NSAttributedString.Key.font : FontSmall,
                 NSAttributedString.Key.foregroundColor : DefaultDarkGray!,
                 NSAttributedString.Key.underlineStyle : 1
@@ -92,6 +93,10 @@ class FPButtonFactory: NSObject {
             button.setAttributedTitle(attrTitle, for: .normal)
             button.titleLabel?.font = FontSmall
             button.setTitleColor(DefaultDarkGray, for: .normal)
+            return button
+        case .buttonWithOnlyIcon:
+            let button = FPButton(buttonStyle: .buttonWithNoBorderNoIconBlue)
+            button.setImage(icon, for: .normal)
             return button
         }
     }
