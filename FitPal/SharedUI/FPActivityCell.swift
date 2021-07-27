@@ -25,6 +25,7 @@ class FPActivityCell: UICollectionViewCell {
     var timeLabel: UILabel?
     var titleLabel: UILabel?
     var desLabel: UILabel?
+    var statusView: FPFeedStatusView?
     var map: MKMapView?
     
     override init(frame: CGRect) {
@@ -37,21 +38,21 @@ class FPActivityCell: UICollectionViewCell {
         vStackLayout.axis = .vertical
         vStackLayout.alignment = .center
         vStackLayout.distribution = .fillProportionally
-        vStackLayout.spacing = 10
+        vStackLayout.spacing = 0
         
         self.contentView.addSubview(vStackLayout)
         vStackLayout.mas_makeConstraints { (make) in
             make?.top.equalTo()(self.contentView)?.offset()(16)
             make?.left.equalTo()(self.contentView)?.offset()(16)
             make?.right.equalTo()(self.contentView)?.offset()(-16)
-            make?.bottom.equalTo()(self.contentView)
+            make?.bottom.equalTo()(self.contentView)?.offset()(-60)
         }
         
         let hStack = UIStackView()
         hStack.axis = .horizontal
         hStack.distribution = .fillProportionally
         hStack.alignment = .center
-        hStack.spacing = 10
+        hStack.spacing = 8
         
         let vStack = UIStackView()
         vStack.axis = .vertical
@@ -103,6 +104,7 @@ class FPActivityCell: UICollectionViewCell {
         vStackLayout.addArrangedSubview(titleLabel!)
         titleLabel?.mas_makeConstraints({ (make) in
             make?.width.equalTo()(UIScreen.main.bounds.width)
+            make?.height.equalTo()(30)
         })
         
         desLabel = UILabel()
@@ -113,6 +115,14 @@ class FPActivityCell: UICollectionViewCell {
         vStackLayout.addArrangedSubview(desLabel!)
         desLabel?.mas_makeConstraints({ (make) in
             make?.width.equalTo()(UIScreen.main.bounds.width)
+            make?.height.equalTo()(20)
+        })
+        
+        statusView = FPFeedStatusView()
+        vStackLayout.addArrangedSubview(statusView!)
+        statusView?.mas_makeConstraints({ (make) in
+            make?.width.equalTo()(UIScreen.main.bounds.width)
+            make?.height.equalTo()(60)
         })
         
         map = MKMapView()
@@ -123,9 +133,18 @@ class FPActivityCell: UICollectionViewCell {
         map?.delegate = self
         vStackLayout.addArrangedSubview(map!)
         map?.mas_makeConstraints({ (make) in
-            make?.height.equalTo()(UIScreen.main.bounds.height * 0.3)
+            make?.width.equalTo()(UIScreen.main.bounds.width)
+            make?.height.equalTo()(UIScreen.main.bounds.height * 0.26)
         })
         
+        let bottomBar = FPFeedBottomBar()
+        self.addSubview(bottomBar)
+        bottomBar.mas_makeConstraints { (make) in
+            make?.left.equalTo()(self.contentView)
+            make?.right.equalTo()(self.contentView)
+            make?.top.equalTo()(vStackLayout.mas_bottom)
+            make?.height.equalTo()(60)
+        }
     }
     
     required init?(coder: NSCoder) {
