@@ -28,6 +28,11 @@
 		929824EE26B05226002C0A3F /* FPFeedBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824ED26B05226002C0A3F /* FPFeedBottomBar.swift */; };
 		929824F326B0605C002C0A3F /* FPMineCenterTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824F226B0605C002C0A3F /* FPMineCenterTopBar.swift */; };
 		929824F626B0730C002C0A3F /* FPMineInfoViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824F526B0730C002C0A3F /* FPMineInfoViewController+Ext.swift */; };
+		929824FA26B082C2002C0A3F /* FPProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824F926B082C2002C0A3F /* FPProfileCell.swift */; };
+		929824FD26B082DD002C0A3F /* FPStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824FC26B082DD002C0A3F /* FPStatusCell.swift */; };
+		9298250026B082FE002C0A3F /* FPWeeklyStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824FF26B082FE002C0A3F /* FPWeeklyStatusCell.swift */; };
+		9298250326B0BB0E002C0A3F /* FPStatusCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298250226B0BB0E002C0A3F /* FPStatusCell+Ext.swift */; };
+		9298250726B0BB93002C0A3F /* FPOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298250626B0BB93002C0A3F /* FPOptionCell.swift */; };
 		92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734B926A87AF100C0D21F /* AppDelegate.swift */; };
 		92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BB26A87AF100C0D21F /* SceneDelegate.swift */; };
 		92A734BE26A87AF100C0D21F /* FPMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BD26A87AF100C0D21F /* FPMainViewController.swift */; };
@@ -68,6 +73,11 @@
 		929824ED26B05226002C0A3F /* FPFeedBottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFeedBottomBar.swift; sourceTree = "<group>"; };
 		929824F226B0605C002C0A3F /* FPMineCenterTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPMineCenterTopBar.swift; sourceTree = "<group>"; };
 		929824F526B0730C002C0A3F /* FPMineInfoViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPMineInfoViewController+Ext.swift"; sourceTree = "<group>"; };
+		929824F926B082C2002C0A3F /* FPProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPProfileCell.swift; sourceTree = "<group>"; };
+		929824FC26B082DD002C0A3F /* FPStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPStatusCell.swift; sourceTree = "<group>"; };
+		929824FF26B082FE002C0A3F /* FPWeeklyStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPWeeklyStatusCell.swift; sourceTree = "<group>"; };
+		9298250226B0BB0E002C0A3F /* FPStatusCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPStatusCell+Ext.swift"; sourceTree = "<group>"; };
+		9298250626B0BB93002C0A3F /* FPOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPOptionCell.swift; sourceTree = "<group>"; };
 		92A734B626A87AF100C0D21F /* FitPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A734B926A87AF100C0D21F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A734BB26A87AF100C0D21F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +151,11 @@
 				929824EA26B04F1B002C0A3F /* FPVerticalLine.swift */,
 				929824ED26B05226002C0A3F /* FPFeedBottomBar.swift */,
 				929824F226B0605C002C0A3F /* FPMineCenterTopBar.swift */,
+				929824F926B082C2002C0A3F /* FPProfileCell.swift */,
+				929824FC26B082DD002C0A3F /* FPStatusCell.swift */,
+				929824FF26B082FE002C0A3F /* FPWeeklyStatusCell.swift */,
+				9298250226B0BB0E002C0A3F /* FPStatusCell+Ext.swift */,
+				9298250626B0BB93002C0A3F /* FPOptionCell.swift */,
 			);
 			path = SharedUI;
 			sourceTree = "<group>";
@@ -358,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				929824DD26AF1818002C0A3F /* FPRecordViewController+MapExt.swift in Sources */,
+				929824FD26B082DD002C0A3F /* FPStatusCell.swift in Sources */,
 				929824DA26AF1216002C0A3F /* FPMineInfoViewController.swift in Sources */,
 				929824E826B04091002C0A3F /* FPFeedStatusView.swift in Sources */,
 				92FEDA1826ADB0E50045941D /* FPFitnessCenterViewController+Ext.swift in Sources */,
@@ -372,15 +388,19 @@
 				929824D326ADE0DC002C0A3F /* FPTabBar.swift in Sources */,
 				92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */,
 				920ED9F926AB107A00E2A19A /* FPMainViewController+Extension.swift in Sources */,
+				9298250326B0BB0E002C0A3F /* FPStatusCell+Ext.swift in Sources */,
 				929824EE26B05226002C0A3F /* FPFeedBottomBar.swift in Sources */,
 				929824F626B0730C002C0A3F /* FPMineInfoViewController+Ext.swift in Sources */,
 				92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */,
 				920EDA0326AB591900E2A19A /* FPStatusBarHelper.swift in Sources */,
 				929824E526AF86BE002C0A3F /* FPHomeActivitiesViewController+Ext.swift in Sources */,
 				92FEDA0C26ADAE870045941D /* FPFitnessCenterViewController.swift in Sources */,
+				929824FA26B082C2002C0A3F /* FPProfileCell.swift in Sources */,
 				926E9E2B26AC634D00279AB2 /* FPLoginViewController.swift in Sources */,
 				929824F326B0605C002C0A3F /* FPMineCenterTopBar.swift in Sources */,
 				920EDA1126AB705C00E2A19A /* FPButton.swift in Sources */,
+				9298250026B082FE002C0A3F /* FPWeeklyStatusCell.swift in Sources */,
+				9298250726B0BB93002C0A3F /* FPOptionCell.swift in Sources */,
 				92FEDA0326ADA3FE0045941D /* FPLoginViewController+TextFieldExt.swift in Sources */,
 				92FEDA0F26ADAF040045941D /* FPRecordViewController.swift in Sources */,
 				929824EB26B04F1B002C0A3F /* FPVerticalLine.swift in Sources */,
@@ -525,7 +545,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FitPal/FitPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.5;
+				CURRENT_PROJECT_VERSION = 1.0.6;
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				INFOPLIST_FILE = FitPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -547,7 +567,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FitPal/FitPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.5;
+				CURRENT_PROJECT_VERSION = 1.0.6;
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				INFOPLIST_FILE = FitPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

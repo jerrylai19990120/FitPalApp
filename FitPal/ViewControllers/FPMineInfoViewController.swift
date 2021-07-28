@@ -38,15 +38,19 @@ class FPMineInfoViewController: UIViewController {
         }
         
         let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
         
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView?.register(FPProfileCell.self, forCellWithReuseIdentifier: "ProfileCell")
+        collectionView?.register(FPWeeklyStatusCell.self, forCellWithReuseIdentifier: "WeeklyStatusCell")
+        collectionView?.register(FPStatusCell.self, forCellWithReuseIdentifier: "StatusCell")
         collectionView?.showsVerticalScrollIndicator = false
         collectionView?.delegate = self
         collectionView?.dataSource = self
-        collectionView?.backgroundColor = UIColor.clear
+        collectionView?.backgroundColor = DefaultLightGray
         self.view.addSubview(collectionView!)
         collectionView?.mas_makeConstraints({ (make) in
-            make?.top.equalTo()(topBar.mas_bottom)
+            make?.top.equalTo()(topBar.mas_bottom)?.offset()(3)
             make?.left.equalTo()(self.view)
             make?.right.equalTo()(self.view)
             make?.bottom.equalTo()(self.view)

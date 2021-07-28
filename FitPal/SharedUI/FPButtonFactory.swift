@@ -19,6 +19,7 @@ enum FPButtonStyle {
     case buttonWithUnderlinedTextNoBorder
     case buttonWithOnlyIcon
     case buttonWithNoBorderNoIconBlack
+    case buttonWithBorderBlueTextBlue
 }
 
 class FPButtonFactory: NSObject {
@@ -106,6 +107,15 @@ class FPButtonFactory: NSObject {
             button.setTitle(text, for: .normal)
             button.titleLabel?.font = FontMainThin
             button.setTitleColor(DefaultBlack, for: .normal)
+            return button
+        case .buttonWithBorderBlueTextBlue:
+            let button = FPButton(buttonStyle: .buttonWithNoIconLightMode)
+            button.layer.cornerRadius = 3
+            button.setTitle(text, for: .normal)
+            button.titleLabel?.font = FontSmallTitle
+            button.setTitleColor(DefaultBlue, for: .normal)
+            button.layer.borderWidth = 1
+            button.layer.borderColor = DefaultBlue?.cgColor
             return button
         }
     }
