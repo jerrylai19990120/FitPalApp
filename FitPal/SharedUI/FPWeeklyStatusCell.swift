@@ -67,7 +67,7 @@ class FPWeeklyStatusCell: UICollectionViewCell {
         lineChartView.backgroundColor = DefaultWhite
         
         for i in 0...7 {
-            let dataPoint = ChartDataEntry(x: Double(i), y: 10)
+            let dataPoint = ChartDataEntry(x: Double(i), y: Double(i * 10))
             lineDataEntry.append(dataPoint)
         }
         

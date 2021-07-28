@@ -25,8 +25,8 @@ class FPHomeActivitiesViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = DefaultWhite
         
         addBtn = UIBarButtonItem(image: UIImage(systemName: "plus.circle"), style: .plain, target: self, action: nil)
-        friendBtn = UIBarButtonItem(image: UIImage(systemName: "person.2"), style: .plain, target: self, action: nil)
-        settingsBtn = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: nil)
+        friendBtn = UIBarButtonItem(image: UIImage(systemName: "person.2"), style: .plain, target: self, action: #selector(friendBtnClicked))
+        settingsBtn = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: #selector(settingsBtnClicked))
         
         self.navigationItem.leftBarButtonItems = [addBtn!, friendBtn!]
         self.navigationItem.rightBarButtonItem = settingsBtn!
@@ -50,7 +50,14 @@ class FPHomeActivitiesViewController: UIViewController {
             make?.bottom.equalTo()(self.view)
         })
     
-        
+    }
+    
+    @objc func friendBtnClicked() {
+        self.navigationController?.pushViewController(FPAddFriendsViewController(), animated: true)
+    }
+    
+    @objc func settingsBtnClicked() {
+        self.navigationController?.pushViewController(FPSettingsViewController(), animated: true)
     }
 
 }

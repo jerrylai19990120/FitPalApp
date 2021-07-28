@@ -36,6 +36,7 @@ extension FPMineInfoViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileCell", for: indexPath) as? FPProfileCell {
+                cell.contentView.isUserInteractionEnabled = false
                 return cell
             } else {
                 return UICollectionViewCell()
@@ -48,6 +49,7 @@ extension FPMineInfoViewController: UICollectionViewDelegate, UICollectionViewDa
             }
         } else if indexPath.section == 2 {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StatusCell", for: indexPath) as? FPStatusCell {
+                cell.contentView.isUserInteractionEnabled = false
                 return cell
             } else {
                 return UICollectionViewCell()

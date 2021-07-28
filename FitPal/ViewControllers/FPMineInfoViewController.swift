@@ -16,6 +16,13 @@ class FPMineInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
+        self.addObservers()
+    }
+    
+    func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(activitiesTab(notif:)), name: NSNotification.Name("ActivitiesTabClicked"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(statisticsTab(notif:)), name: NSNotification.Name("StatisticsTabClicked"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(settingsTab(notif:)), name: NSNotification.Name("SettingsTabClicked"), object: nil)
     }
     
     func setupViews() {
@@ -23,8 +30,8 @@ class FPMineInfoViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = DefaultWhite
         self.navigationItem.title = "You"
         
-        friendBtn = UIBarButtonItem(image: UIImage(systemName: "person.2"), style: .plain, target: self, action: nil)
-        settingsBtn = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: nil)
+        friendBtn = UIBarButtonItem(image: UIImage(systemName: "person.2"), style: .plain, target: self, action: #selector(friendBtnClicked))
+        settingsBtn = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: #selector(settingsBtnClicked))
         self.navigationItem.leftBarButtonItem = friendBtn
         self.navigationItem.rightBarButtonItem = settingsBtn
         
@@ -55,7 +62,33 @@ class FPMineInfoViewController: UIViewController {
             make?.right.equalTo()(self.view)
             make?.bottom.equalTo()(self.view)
         })
-        
     }
     
+    @objc func activitiesTab(notif: NSNotification) {
+        self.navigationController?.pushViewController(FPPersonalActivitiesViewController(), animated: true)
+    }
+    
+    @objc func statisticsTab(notif: NSNotification) {
+        self.navigationController?.pushViewController(FPStatisticsViewController(), animated: true)
+    }
+    
+    @objc func settingsTab(notif: NSNotification) {
+        self.navigationController?.pushViewController(FPSettingsViewController(), animated: true)
+    }
+    
+    @objc func friendBtnClicked() {
+        self.navigationController?.pushViewController(FPAddFriendsViewController(), animated: true)
+    }
+    
+    @objc func settingsBtnClicked() {
+        self.navigationController?.pushViewController(FPSettingsViewController(), animated: true)
+    }
+    
+}
+
+
+protocol FPMineInfoViewDelegate: FPMineInfoViewController {
+    func navigateToMyActivities()
+    func navigateToStatistics()
+    func navigateToSettings()
 }
