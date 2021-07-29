@@ -24,6 +24,7 @@ class FPLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
+        GIDSignIn.sharedInstance()?.presentingViewController = self
     }
     
     func setupViews() {
@@ -85,6 +86,7 @@ class FPLoginViewController: UIViewController {
         
         let loginFB = FBLoginButton()
         let loginGoogle = GIDSignInButton()
+        loginGoogle.style = .wide
         let loginApple = ASAuthorizationAppleIDButton()
         
         vStackButtons?.addArrangedSubview(loginFB)

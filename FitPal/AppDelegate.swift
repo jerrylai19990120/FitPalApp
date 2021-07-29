@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         FirebaseApp.configure()
         UINavigationBar.appearance().tintColor = DefaultBlue
+        
+        GIDSignIn.sharedInstance()?.clientID = "860551634519-ubsmh27p30b2lfan9ekn2c14md4udlkq.apps.googleusercontent.com"
         return true
     }
           

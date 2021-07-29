@@ -31,6 +31,7 @@ class FPMainViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.view.backgroundColor = DefaultWhite
         self.setupWelcomeView()
+        GIDSignIn.sharedInstance()?.presentingViewController = self
     }
     
     func setUpSlidingPictures() {
@@ -130,6 +131,7 @@ class FPMainViewController: UIViewController {
         let loginFacebook = FBLoginButton()
         
         let loginGoogle = GIDSignInButton()
+        loginGoogle.style = .wide
         
         let loginApple = ASAuthorizationAppleIDButton()
         loginApple.addTarget(self, action: #selector(appleLoginBtnClicked), for: .touchUpInside)
