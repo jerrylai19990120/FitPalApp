@@ -37,6 +37,10 @@
 		9298254B26B20FA3002C0A3F /* FPStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298254A26B20FA3002C0A3F /* FPStatisticsViewController.swift */; };
 		9298254E26B20FC0002C0A3F /* FPPersonalActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298254D26B20FC0002C0A3F /* FPPersonalActivitiesViewController.swift */; };
 		9298255126B224B9002C0A3F /* FPAddFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298255026B224B9002C0A3F /* FPAddFriendsViewController.swift */; };
+		9298255526B2F99C002C0A3F /* FPStatisticsViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298255426B2F99C002C0A3F /* FPStatisticsViewController+Ext.swift */; };
+		9298255826B2FAD2002C0A3F /* FPAvgStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298255726B2FAD2002C0A3F /* FPAvgStatCell.swift */; };
+		9298255B26B2FB0B002C0A3F /* FPYearlyStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298255A26B2FB0B002C0A3F /* FPYearlyStatCell.swift */; };
+		9298255E26B2FB24002C0A3F /* FPAllTimeStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298255D26B2FB24002C0A3F /* FPAllTimeStatCell.swift */; };
 		92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734B926A87AF100C0D21F /* AppDelegate.swift */; };
 		92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BB26A87AF100C0D21F /* SceneDelegate.swift */; };
 		92A734BE26A87AF100C0D21F /* FPMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BD26A87AF100C0D21F /* FPMainViewController.swift */; };
@@ -86,6 +90,10 @@
 		9298254A26B20FA3002C0A3F /* FPStatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPStatisticsViewController.swift; sourceTree = "<group>"; };
 		9298254D26B20FC0002C0A3F /* FPPersonalActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPPersonalActivitiesViewController.swift; sourceTree = "<group>"; };
 		9298255026B224B9002C0A3F /* FPAddFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPAddFriendsViewController.swift; sourceTree = "<group>"; };
+		9298255426B2F99C002C0A3F /* FPStatisticsViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPStatisticsViewController+Ext.swift"; sourceTree = "<group>"; };
+		9298255726B2FAD2002C0A3F /* FPAvgStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPAvgStatCell.swift; sourceTree = "<group>"; };
+		9298255A26B2FB0B002C0A3F /* FPYearlyStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPYearlyStatCell.swift; sourceTree = "<group>"; };
+		9298255D26B2FB24002C0A3F /* FPAllTimeStatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPAllTimeStatCell.swift; sourceTree = "<group>"; };
 		92A734B626A87AF100C0D21F /* FitPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A734B926A87AF100C0D21F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A734BB26A87AF100C0D21F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +172,9 @@
 				929824FF26B082FE002C0A3F /* FPWeeklyStatusCell.swift */,
 				9298250226B0BB0E002C0A3F /* FPStatusCell+Ext.swift */,
 				9298250626B0BB93002C0A3F /* FPOptionCell.swift */,
+				9298255726B2FAD2002C0A3F /* FPAvgStatCell.swift */,
+				9298255A26B2FB0B002C0A3F /* FPYearlyStatCell.swift */,
+				9298255D26B2FB24002C0A3F /* FPAllTimeStatCell.swift */,
 			);
 			path = SharedUI;
 			sourceTree = "<group>";
@@ -227,6 +238,7 @@
 				9298254A26B20FA3002C0A3F /* FPStatisticsViewController.swift */,
 				9298254D26B20FC0002C0A3F /* FPPersonalActivitiesViewController.swift */,
 				9298255026B224B9002C0A3F /* FPAddFriendsViewController.swift */,
+				9298255426B2F99C002C0A3F /* FPStatisticsViewController+Ext.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -394,6 +406,7 @@
 				929824E226AF8666002C0A3F /* FPActivityCell.swift in Sources */,
 				920EDA0026AB1B9A00E2A19A /* FPBackgroundCell.swift in Sources */,
 				920EDA0E26AB6E5C00E2A19A /* FPButtonFactory.swift in Sources */,
+				9298255826B2FAD2002C0A3F /* FPAvgStatCell.swift in Sources */,
 				92FEDA1526ADAF860045941D /* FPMineCenterViewController.swift in Sources */,
 				92FEDA1226ADAF730045941D /* FPHomeViewController.swift in Sources */,
 				929824D726AF10D4002C0A3F /* FPHomeActivitiesViewController.swift in Sources */,
@@ -403,13 +416,16 @@
 				9298254E26B20FC0002C0A3F /* FPPersonalActivitiesViewController.swift in Sources */,
 				920ED9F926AB107A00E2A19A /* FPMainViewController+Extension.swift in Sources */,
 				9298254B26B20FA3002C0A3F /* FPStatisticsViewController.swift in Sources */,
+				9298255E26B2FB24002C0A3F /* FPAllTimeStatCell.swift in Sources */,
 				9298250326B0BB0E002C0A3F /* FPStatusCell+Ext.swift in Sources */,
 				929824EE26B05226002C0A3F /* FPFeedBottomBar.swift in Sources */,
 				929824F626B0730C002C0A3F /* FPMineInfoViewController+Ext.swift in Sources */,
+				9298255526B2F99C002C0A3F /* FPStatisticsViewController+Ext.swift in Sources */,
 				92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */,
 				920EDA0326AB591900E2A19A /* FPStatusBarHelper.swift in Sources */,
 				929824E526AF86BE002C0A3F /* FPHomeActivitiesViewController+Ext.swift in Sources */,
 				92FEDA0C26ADAE870045941D /* FPFitnessCenterViewController.swift in Sources */,
+				9298255B26B2FB0B002C0A3F /* FPYearlyStatCell.swift in Sources */,
 				929824FA26B082C2002C0A3F /* FPProfileCell.swift in Sources */,
 				926E9E2B26AC634D00279AB2 /* FPLoginViewController.swift in Sources */,
 				929824F326B0605C002C0A3F /* FPMineCenterTopBar.swift in Sources */,
