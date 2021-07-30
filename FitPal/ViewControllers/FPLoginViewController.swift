@@ -17,8 +17,8 @@ class FPLoginViewController: UIViewController {
     var hStack: UIStackView?
     var vStackButtons: UIStackView?
     var vStackInputs: UIStackView?
-    var emailField: UITextField?
-    var passwordField: UITextField?
+    var emailField: FPTextField?
+    var passwordField: FPTextField?
     var loginBtn: FPButton?
 
     override func viewDidLoad() {
@@ -123,13 +123,13 @@ class FPLoginViewController: UIViewController {
         vStackInputs?.distribution = .fillEqually
         vStackInputs?.spacing = 0
         
-        emailField = UITextField()
+        emailField = FPTextField()
         emailField?.placeholder = "Email"
         emailField?.borderStyle = .roundedRect
         emailField?.clearButtonMode = .whileEditing
         emailField?.delegate = self
         
-        passwordField = UITextField()
+        passwordField = FPTextField()
         passwordField?.placeholder = "Password"
         passwordField?.borderStyle = .roundedRect
         passwordField?.clearButtonMode = .whileEditing

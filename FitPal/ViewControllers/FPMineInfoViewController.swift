@@ -7,11 +7,17 @@
 
 import UIKit
 
+enum FPMineInfoSelection {
+    case activitiesSelection
+    case profileSelection
+}
+
 class FPMineInfoViewController: UIViewController {
     
     var friendBtn: UIBarButtonItem?
     var settingsBtn: UIBarButtonItem?
     var collectionView: UICollectionView?
+    var selection: FPMineInfoSelection = .profileSelection
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +29,9 @@ class FPMineInfoViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(activitiesTab(notif:)), name: NSNotification.Name("ActivitiesTabClicked"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(statisticsTab(notif:)), name: NSNotification.Name("StatisticsTabClicked"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(settingsTab(notif:)), name: NSNotification.Name("SettingsTabClicked"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(activitiesTabBarButtonClicked(notif:)), name: NSNotification.Name("ActivitiesTabButtonTabClicked"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(profileTabBarButtonClicked(notif:)), name: NSNotification.Name("ProfileTabButtonClicked"), object: nil)
     }
     
     func setupViews() {
@@ -35,7 +44,7 @@ class FPMineInfoViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = friendBtn
         self.navigationItem.rightBarButtonItem = settingsBtn
         
-        let topBar = FPMineCenterTopBar()
+        let topBar = FPMineCenterTopBar(selection: selection)
         self.view.addSubview(topBar)
         topBar.mas_makeConstraints { (make) in
             make?.top.equalTo()(self.view)?.offset()(GetStatusBarHeight() + (navigationController?.navigationBar.frame.height)!)
@@ -84,11 +93,13 @@ class FPMineInfoViewController: UIViewController {
         self.navigationController?.pushViewController(FPSettingsViewController(), animated: true)
     }
     
+    @objc func activitiesTabBarButtonClicked(notif: Notification) {
+        
+    }
+    
+    @objc func profileTabBarButtonClicked(notif: Notification) {
+        
+    }
+    
 }
 
-
-protocol FPMineInfoViewDelegate: FPMineInfoViewController {
-    func navigateToMyActivities()
-    func navigateToStatistics()
-    func navigateToSettings()
-}

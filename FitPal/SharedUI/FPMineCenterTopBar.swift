@@ -14,6 +14,13 @@ class FPMineCenterTopBar: UIView {
     var profileBtn: FPButton?
     var hStack: UIStackView?
     var slidingBar: UIView?
+    var selection: FPMineInfoSelection?
+    
+    init(selection: FPMineInfoSelection) {
+        super.init(frame: .zero)
+        self.selection = selection
+        self.setupViews()
+    }
 
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -48,21 +55,30 @@ class FPMineCenterTopBar: UIView {
         slidingBar = UIView()
         slidingBar?.backgroundColor = DefaultBlue
         self.addSubview(slidingBar!)
-        slidingBar?.frame = CGRect(x: 0, y: 60, width: UIScreen.main.bounds.width / 2, height: 3)
+        switch selection {
+        case .activitiesSelection:
+            slidingBar?.frame = CGRect(x: 0, y: 60, width: UIScreen.main.bounds.width / 2, height: 3)
+            break
+        case .profileSelection:
+            slidingBar?.frame = CGRect(x: UIScreen.main.bounds.width / 2, y: 60, width: UIScreen.main.bounds.width / 2, height: 3)
+            break
+        default:
+            fatalError("Error has occurred")
+        }
     }
     
     @objc func activityBtnClicked() {
         UIView.animate(withDuration: 0.2) {
             self.slidingBar?.frame = CGRect(x: 0, y: (self.hStack?.frame.height)!, width: UIScreen.main.bounds.width / 2, height: 3)
         }
-        
+        NotificationCenter.default.post(name: Notification.Name("ActivitiesTabButtonTabClicked"), object: nil)
     }
     
     @objc func profileBtnClicked() {
         UIView.animate(withDuration: 0.2) {
             self.slidingBar?.frame = CGRect(x: UIScreen.main.bounds.width / 2, y: (self.hStack?.frame.height)!, width: UIScreen.main.bounds.width / 2, height: 3)
         }
-        
+        NotificationCenter.default.post(name: Notification.Name("ProfileTabButtonClicked"), object: nil)
     }
     
 }
