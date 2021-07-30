@@ -30,6 +30,7 @@ class FPStatisticsViewController: UIViewController {
         collectionView?.register(FPAvgStatCell.self, forCellWithReuseIdentifier: "AvgStatCell")
         collectionView?.register(FPYearlyStatCell.self, forCellWithReuseIdentifier: "YearlyStatCell")
         collectionView?.register(FPAllTimeStatCell.self, forCellWithReuseIdentifier: "AllTimeStatCell")
+        collectionView?.register(FPHeaderCollectionView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: FPHeaderCollectionView.identifier)
         self.view.addSubview(collectionView!)
         collectionView?.mas_makeConstraints({ (make) in
             make?.top.equalTo()(self.view)

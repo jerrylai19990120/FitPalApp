@@ -88,6 +88,7 @@ class FPLoginViewController: UIViewController {
         let loginGoogle = GIDSignInButton()
         loginGoogle.style = .wide
         let loginApple = ASAuthorizationAppleIDButton()
+        loginApple.addTarget(self, action: #selector(appleLoginBtnClicked), for: .touchUpInside)
         
         vStackButtons?.addArrangedSubview(loginFB)
         vStackButtons?.addArrangedSubview(loginGoogle)
@@ -164,6 +165,17 @@ class FPLoginViewController: UIViewController {
     
     @objc func backBtnClicked() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func appleLoginBtnClicked() {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.fullName, .email]
+            
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
     }
     
 }

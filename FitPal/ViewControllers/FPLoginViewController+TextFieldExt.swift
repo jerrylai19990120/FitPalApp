@@ -7,8 +7,21 @@
 
 import Foundation
 import UIKit
+import AuthenticationServices
 
-extension FPLoginViewController: UITextFieldDelegate {
+extension FPLoginViewController: UITextFieldDelegate, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+    
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        
+    }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         self.checkIfBothFieldFilled()
