@@ -8,6 +8,9 @@
 import UIKit
 
 class FPPersonalActivitiesViewController: UIViewController {
+    
+    var collectionView: UICollectionView?
+    var searchField: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +24,16 @@ class FPPersonalActivitiesViewController: UIViewController {
         
         let searchBtn = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: nil)
         self.navigationItem.rightBarButtonItem = searchBtn
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView?.register(FPActivityCell.self, forCellWithReuseIdentifier: FPActivityCell.identifier)
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+        self.view.addSubview(collectionView!)
+        collectionView?.mas_makeConstraints({ (make) in
+            
+        })
     }
 }

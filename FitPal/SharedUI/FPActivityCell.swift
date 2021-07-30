@@ -11,6 +11,8 @@ import MapKit
 
 class FPActivityCell: UICollectionViewCell {
     
+    static let identifier = "ActivityCell"
+    
     var avatarView: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = true
