@@ -27,7 +27,6 @@
 		929824EB26B04F1B002C0A3F /* FPVerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824EA26B04F1B002C0A3F /* FPVerticalLine.swift */; };
 		929824EE26B05226002C0A3F /* FPFeedBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824ED26B05226002C0A3F /* FPFeedBottomBar.swift */; };
 		929824F326B0605C002C0A3F /* FPMineCenterTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824F226B0605C002C0A3F /* FPMineCenterTopBar.swift */; };
-		929824F626B0730C002C0A3F /* FPMineInfoViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824F526B0730C002C0A3F /* FPMineInfoViewController+Ext.swift */; };
 		929824FA26B082C2002C0A3F /* FPProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824F926B082C2002C0A3F /* FPProfileCell.swift */; };
 		929824FD26B082DD002C0A3F /* FPStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824FC26B082DD002C0A3F /* FPStatusCell.swift */; };
 		9298250026B082FE002C0A3F /* FPWeeklyStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824FF26B082FE002C0A3F /* FPWeeklyStatusCell.swift */; };
@@ -46,10 +45,11 @@
 		9298256726B362C2002C0A3F /* FPStatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298256626B362C2002C0A3F /* FPStatTableViewCell.swift */; };
 		9298256B26B36B22002C0A3F /* FPYearlyStatCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298256A26B36B22002C0A3F /* FPYearlyStatCell+Ext.swift */; };
 		9298256E26B36BBC002C0A3F /* FPAllTimeStatCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298256D26B36BBC002C0A3F /* FPAllTimeStatCell+Ext.swift */; };
-		9298257126B37995002C0A3F /* FPPersonalActivitiesViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298257026B37995002C0A3F /* FPPersonalActivitiesViewController+Ext.swift */; };
 		9298257526B44D6A002C0A3F /* FPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298257426B44D6A002C0A3F /* FPTextField.swift */; };
 		9298257826B45573002C0A3F /* FPPersonalActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298257726B45573002C0A3F /* FPPersonalActivitiesView.swift */; };
 		9298257B26B455C7002C0A3F /* FPMineInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298257A26B455C7002C0A3F /* FPMineInfoView.swift */; };
+		9298257E26B45C28002C0A3F /* FPPersonalActivitiesView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298257D26B45C28002C0A3F /* FPPersonalActivitiesView+Ext.swift */; };
+		9298258126B45CD7002C0A3F /* FPMineInfoView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298258026B45CD7002C0A3F /* FPMineInfoView+Ext.swift */; };
 		92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734B926A87AF100C0D21F /* AppDelegate.swift */; };
 		92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BB26A87AF100C0D21F /* SceneDelegate.swift */; };
 		92A734BE26A87AF100C0D21F /* FPMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BD26A87AF100C0D21F /* FPMainViewController.swift */; };
@@ -89,7 +89,6 @@
 		929824EA26B04F1B002C0A3F /* FPVerticalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPVerticalLine.swift; sourceTree = "<group>"; };
 		929824ED26B05226002C0A3F /* FPFeedBottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFeedBottomBar.swift; sourceTree = "<group>"; };
 		929824F226B0605C002C0A3F /* FPMineCenterTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPMineCenterTopBar.swift; sourceTree = "<group>"; };
-		929824F526B0730C002C0A3F /* FPMineInfoViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPMineInfoViewController+Ext.swift"; sourceTree = "<group>"; };
 		929824F926B082C2002C0A3F /* FPProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPProfileCell.swift; sourceTree = "<group>"; };
 		929824FC26B082DD002C0A3F /* FPStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPStatusCell.swift; sourceTree = "<group>"; };
 		929824FF26B082FE002C0A3F /* FPWeeklyStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPWeeklyStatusCell.swift; sourceTree = "<group>"; };
@@ -108,10 +107,11 @@
 		9298256626B362C2002C0A3F /* FPStatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPStatTableViewCell.swift; sourceTree = "<group>"; };
 		9298256A26B36B22002C0A3F /* FPYearlyStatCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPYearlyStatCell+Ext.swift"; sourceTree = "<group>"; };
 		9298256D26B36BBC002C0A3F /* FPAllTimeStatCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPAllTimeStatCell+Ext.swift"; sourceTree = "<group>"; };
-		9298257026B37995002C0A3F /* FPPersonalActivitiesViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPPersonalActivitiesViewController+Ext.swift"; sourceTree = "<group>"; };
 		9298257426B44D6A002C0A3F /* FPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPTextField.swift; sourceTree = "<group>"; };
 		9298257726B45573002C0A3F /* FPPersonalActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPPersonalActivitiesView.swift; sourceTree = "<group>"; };
 		9298257A26B455C7002C0A3F /* FPMineInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPMineInfoView.swift; sourceTree = "<group>"; };
+		9298257D26B45C28002C0A3F /* FPPersonalActivitiesView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPPersonalActivitiesView+Ext.swift"; sourceTree = "<group>"; };
+		9298258026B45CD7002C0A3F /* FPMineInfoView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPMineInfoView+Ext.swift"; sourceTree = "<group>"; };
 		92A734B626A87AF100C0D21F /* FitPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A734B926A87AF100C0D21F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A734BB26A87AF100C0D21F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +201,8 @@
 				9298257426B44D6A002C0A3F /* FPTextField.swift */,
 				9298257726B45573002C0A3F /* FPPersonalActivitiesView.swift */,
 				9298257A26B455C7002C0A3F /* FPMineInfoView.swift */,
+				9298257D26B45C28002C0A3F /* FPPersonalActivitiesView+Ext.swift */,
+				9298258026B45CD7002C0A3F /* FPMineInfoView+Ext.swift */,
 			);
 			path = SharedUI;
 			sourceTree = "<group>";
@@ -259,13 +261,11 @@
 				929824D926AF1216002C0A3F /* FPMineInfoViewController.swift */,
 				929824DC26AF1818002C0A3F /* FPRecordViewController+MapExt.swift */,
 				929824E426AF86BE002C0A3F /* FPHomeActivitiesViewController+Ext.swift */,
-				929824F526B0730C002C0A3F /* FPMineInfoViewController+Ext.swift */,
 				9298254726B20F8E002C0A3F /* FPSettingsViewController.swift */,
 				9298254A26B20FA3002C0A3F /* FPStatisticsViewController.swift */,
 				9298254D26B20FC0002C0A3F /* FPPersonalActivitiesViewController.swift */,
 				9298255026B224B9002C0A3F /* FPAddFriendsViewController.swift */,
 				9298255426B2F99C002C0A3F /* FPStatisticsViewController+Ext.swift */,
-				9298257026B37995002C0A3F /* FPPersonalActivitiesViewController+Ext.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -434,6 +434,7 @@
 				9298257526B44D6A002C0A3F /* FPTextField.swift in Sources */,
 				92FEDA1826ADB0E50045941D /* FPFitnessCenterViewController+Ext.swift in Sources */,
 				920ED9F026AB03B600E2A19A /* FPUIDefinitions.swift in Sources */,
+				9298257E26B45C28002C0A3F /* FPPersonalActivitiesView+Ext.swift in Sources */,
 				929824E226AF8666002C0A3F /* FPActivityCell.swift in Sources */,
 				920EDA0026AB1B9A00E2A19A /* FPBackgroundCell.swift in Sources */,
 				920EDA0E26AB6E5C00E2A19A /* FPButtonFactory.swift in Sources */,
@@ -441,6 +442,7 @@
 				9298255826B2FAD2002C0A3F /* FPAvgStatCell.swift in Sources */,
 				92FEDA1526ADAF860045941D /* FPMineCenterViewController.swift in Sources */,
 				92FEDA1226ADAF730045941D /* FPHomeViewController.swift in Sources */,
+				9298258126B45CD7002C0A3F /* FPMineInfoView+Ext.swift in Sources */,
 				929824D726AF10D4002C0A3F /* FPHomeActivitiesViewController.swift in Sources */,
 				92A734BE26A87AF100C0D21F /* FPMainViewController.swift in Sources */,
 				9298257826B45573002C0A3F /* FPPersonalActivitiesView.swift in Sources */,
@@ -453,9 +455,7 @@
 				9298255E26B2FB24002C0A3F /* FPAllTimeStatCell.swift in Sources */,
 				9298250326B0BB0E002C0A3F /* FPStatusCell+Ext.swift in Sources */,
 				929824EE26B05226002C0A3F /* FPFeedBottomBar.swift in Sources */,
-				929824F626B0730C002C0A3F /* FPMineInfoViewController+Ext.swift in Sources */,
 				9298255526B2F99C002C0A3F /* FPStatisticsViewController+Ext.swift in Sources */,
-				9298257126B37995002C0A3F /* FPPersonalActivitiesViewController+Ext.swift in Sources */,
 				92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */,
 				9298256E26B36BBC002C0A3F /* FPAllTimeStatCell+Ext.swift in Sources */,
 				920EDA0326AB591900E2A19A /* FPStatusBarHelper.swift in Sources */,

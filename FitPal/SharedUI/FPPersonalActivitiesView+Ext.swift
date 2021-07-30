@@ -1,14 +1,14 @@
 //
-//  FPPersonalActivitiesViewController+Ext.swift
+//  FPPersonalActivitiesView+Ext.swift
 //  FitPal
 //
-//  Created by Jerry Lai on 2021-07-29.
+//  Created by Jerry Lai on 2021-07-30.
 //
 
 import Foundation
 import UIKit
 
-extension FPPersonalActivitiesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension FPPersonalActivitiesView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.66)

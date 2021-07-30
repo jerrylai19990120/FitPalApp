@@ -16,8 +16,11 @@ class FPMineInfoViewController: UIViewController {
     
     var friendBtn: UIBarButtonItem?
     var settingsBtn: UIBarButtonItem?
-    var collectionView: UICollectionView?
     var selection: FPMineInfoSelection = .profileSelection
+    var mineInfoView: FPMineInfoView?
+    var activitiesView: FPPersonalActivitiesView?
+    var mineInfoY: CGFloat?
+    var activitiesY: CGFloat?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,24 +56,25 @@ class FPMineInfoViewController: UIViewController {
             make?.height.equalTo()(60)
         }
         
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
+        mineInfoY = 63 + GetStatusBarHeight() + (self.navigationController?.navigationBar.frame.height)!
+        mineInfoView = FPMineInfoView()
+        self.view.addSubview(mineInfoView!)
         
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView?.register(FPProfileCell.self, forCellWithReuseIdentifier: "ProfileCell")
-        collectionView?.register(FPWeeklyStatusCell.self, forCellWithReuseIdentifier: "WeeklyStatusCell")
-        collectionView?.register(FPStatusCell.self, forCellWithReuseIdentifier: "StatusCell")
-        collectionView?.showsVerticalScrollIndicator = false
-        collectionView?.delegate = self
-        collectionView?.dataSource = self
-        collectionView?.backgroundColor = DefaultLightGray
-        self.view.addSubview(collectionView!)
-        collectionView?.mas_makeConstraints({ (make) in
-            make?.top.equalTo()(topBar.mas_bottom)?.offset()(3)
-            make?.left.equalTo()(self.view)
-            make?.right.equalTo()(self.view)
-            make?.bottom.equalTo()(self.view)
-        })
+        activitiesY = (self.navigationController?.navigationBar.frame.height)! + GetStatusBarHeight() + 70
+        activitiesView = FPPersonalActivitiesView()
+        self.view.addSubview(activitiesView!)
+        
+        switch selection {
+        case .activitiesSelection:
+            mineInfoView?.frame = CGRect(x: self.view.frame.width, y: mineInfoY!, width: self.view.frame.width, height: self.view.frame.height - mineInfoY!)
+            activitiesView?.frame = CGRect(x: 0, y: activitiesY!, width: self.view.frame.width, height: self.view.frame.height - activitiesY!)
+            break
+        case .profileSelection:
+            mineInfoView?.frame = CGRect(x: 0, y: mineInfoY!, width: self.view.frame.width, height: self.view.frame.height - mineInfoY!)
+            activitiesView?.frame = CGRect(x: -self.view.frame.width, y: activitiesY!, width: self.view.frame.width, height: self.view.frame.height - activitiesY!)
+            break
+        }
+        
     }
     
     @objc func activitiesTab(notif: NSNotification) {
@@ -94,11 +98,19 @@ class FPMineInfoViewController: UIViewController {
     }
     
     @objc func activitiesTabBarButtonClicked(notif: Notification) {
-        
+        self.selection = .activitiesSelection
+        UIView.animate(withDuration: 0.2) {
+            self.mineInfoView?.frame = CGRect(x: self.view.frame.width, y: self.mineInfoY!, width: self.view.frame.width, height: self.view.frame.height - self.mineInfoY!)
+            self.activitiesView?.frame = CGRect(x: 0, y: self.activitiesY!, width: self.view.frame.width, height: self.view.frame.height - self.activitiesY!)
+        }
     }
     
     @objc func profileTabBarButtonClicked(notif: Notification) {
-        
+        self.selection = .profileSelection
+        UIView.animate(withDuration: 0.2) {
+            self.mineInfoView?.frame = CGRect(x: 0, y: self.mineInfoY!, width: self.view.frame.width, height: self.view.frame.height - self.mineInfoY!)
+            self.activitiesView?.frame = CGRect(x: -self.view.frame.width, y: self.activitiesY!, width: self.view.frame.width, height: self.view.frame.height - self.activitiesY!)
+        }
     }
     
 }

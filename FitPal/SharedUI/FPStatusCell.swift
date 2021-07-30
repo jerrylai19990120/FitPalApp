@@ -36,6 +36,7 @@ class FPStatusCell: UICollectionViewCell {
         tableView?.dataSource = self
         tableView?.backgroundColor = DefaultWhite
         tableView?.rowHeight = 50
+        tableView?.isScrollEnabled = false
         self.addSubview(tableView!)
         tableView?.mas_makeConstraints({ (make) in
             make?.top.equalTo()(self.contentView)

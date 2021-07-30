@@ -8,7 +8,9 @@
 import UIKit
 
 class FPMineInfoView: UIView {
-
+    
+    var collectionView: UICollectionView?
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         self.setupViews()
@@ -19,7 +21,24 @@ class FPMineInfoView: UIView {
     }
     
     func setupViews() {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
         
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView?.register(FPProfileCell.self, forCellWithReuseIdentifier: "ProfileCell")
+        collectionView?.register(FPWeeklyStatusCell.self, forCellWithReuseIdentifier: "WeeklyStatusCell")
+        collectionView?.register(FPStatusCell.self, forCellWithReuseIdentifier: "StatusCell")
+        collectionView?.showsVerticalScrollIndicator = false
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+        collectionView?.backgroundColor = DefaultLightGray
+        self.addSubview(collectionView!)
+        collectionView?.mas_makeConstraints({ (make) in
+            make?.top.equalTo()(self)
+            make?.left.equalTo()(self)
+            make?.right.equalTo()(self)
+            make?.bottom.equalTo()(self)
+        })
     }
 
 }

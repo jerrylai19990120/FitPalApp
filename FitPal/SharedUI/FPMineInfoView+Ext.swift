@@ -1,14 +1,14 @@
 //
-//  FPMineInfoViewController+Ext.swift
+//  FPMineInfoView+Ext.swift
 //  FitPal
 //
-//  Created by Jerry Lai on 2021-07-27.
+//  Created by Jerry Lai on 2021-07-30.
 //
 
 import Foundation
 import UIKit
 
-extension FPMineInfoViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension FPMineInfoView: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 18, right: 0)
@@ -57,6 +57,5 @@ extension FPMineInfoViewController: UICollectionViewDelegate, UICollectionViewDa
         }
         return UICollectionViewCell()
     }
-    
     
 }
