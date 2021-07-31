@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Lottie
 
 class FPAddFriendsViewController: UIViewController {
     
     var searchField: FPTextField?
+    var collectionView: UICollectionView?
+    var results = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +45,54 @@ class FPAddFriendsViewController: UIViewController {
             make?.top.equalTo()(self.view)?.offset()(GetStatusBarHeight() + (self.navigationController?.navigationBar.frame.height)! + 10)
             make?.height.equalTo()(40)
         })
+        
+        let animationView = AnimationView(animation: Animation.named("running"))
+        animationView.isUserInteractionEnabled = false
+        animationView.loopMode = .loop
+        self.view.addSubview(animationView)
+        animationView.mas_makeConstraints { (make) in
+            make?.centerX.equalTo()(self.view.mas_centerX)
+            make?.centerY.equalTo()(self.view.mas_centerY)
+            make?.width.equalTo()(self.view.frame.width * 0.5)
+            make?.height.equalTo()(self.view.frame.width * 0.5)
+        }
+        animationView.play()
+        
+        let label = UILabel()
+        label.text = "Find your friends on FitPal"
+        label.textColor = DefaultTabColor
+        label.font = FontMain
+        self.view.addSubview(label)
+        label.mas_makeConstraints { (make) in
+            make?.top.equalTo()(animationView.mas_bottom)?.offset()(16)
+            make?.centerX.equalTo()(self.view.mas_centerX)
+        }
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+        collectionView?.backgroundColor = DefaultWhite
+        self.view.addSubview(collectionView!)
+        collectionView?.mas_makeConstraints({ (make) in
+            make?.top.equalTo()(searchField?.mas_bottom)?.offset()(10)
+            make?.left.equalTo()(self.view)
+            make?.right.equalTo()(self.view)
+            make?.bottom.equalTo()(self.view)
+        })
+        
+        if results.count == 0 {
+            collectionView?.isHidden = true
+            animationView.isHidden = false
+            label.isHidden = false
+        } else {
+            collectionView?.isHidden = false
+            animationView.isHidden = true
+            label.isHidden = true
+        }
+        
     }
 
 }

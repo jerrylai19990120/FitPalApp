@@ -12,7 +12,11 @@ class FPHomeActivitiesViewController: UIViewController {
     var collectionView: UICollectionView?
     var friendBtn: UIBarButtonItem?
     var addBtn: UIBarButtonItem?
+    var addButton: UIButton?
     var settingsBtn: UIBarButtonItem?
+    var didRotate: Bool?
+    var manualActivitySection: UIView?
+    var cover: UIView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +28,14 @@ class FPHomeActivitiesViewController: UIViewController {
         self.navigationItem.title = "Home"
         self.navigationController?.navigationBar.barTintColor = DefaultWhite
         
-        addBtn = UIBarButtonItem(image: UIImage(systemName: "plus.circle"), style: .plain, target: self, action: nil)
+        didRotate = false
+        addButton = UIButton(type: .system)
+        addButton?.tintColor = DefaultBlue
+        addButton?.setImage(UIImage(systemName: "plus.circle"), for: .normal)
+        addButton?.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        addButton?.addTarget(self, action: #selector(addBtnClicked), for: .touchUpInside)
+        addBtn = UIBarButtonItem(customView: addButton!)
+        
         friendBtn = UIBarButtonItem(image: UIImage(systemName: "person.2"), style: .plain, target: self, action: #selector(friendBtnClicked))
         settingsBtn = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: #selector(settingsBtnClicked))
         
@@ -49,6 +60,60 @@ class FPHomeActivitiesViewController: UIViewController {
             make?.right.equalTo()(self.view)
             make?.bottom.equalTo()(self.view)
         })
+        
+        cover = UIView()
+        cover?.backgroundColor = DefaultBlack
+        cover?.alpha = 0.6
+        cover?.isHidden = true
+        self.view.addSubview(cover!)
+        cover?.mas_makeConstraints { (make) in
+            make?.left.equalTo()(self.view)
+            make?.right.equalTo()(self.view)
+            make?.bottom.equalTo()(self.view)?.offset()((self.tabBarController?.tabBar.frame.height)!)
+            make?.top.equalTo()(self.view)
+        }
+        
+        let touch = UITapGestureRecognizer(target: self, action: #selector(touchHandler))
+        touch.numberOfTouchesRequired = 1
+        cover?.addGestureRecognizer(touch)
+        
+        manualActivitySection = UIView()
+        manualActivitySection?.backgroundColor = DefaultWhite
+        manualActivitySection?.frame = CGRect(x: 0, y: GetStatusBarHeight() + (self.navigationController?.navigationBar.frame.height)! - 90, width: self.view.frame.width, height: 90)
+        self.view.addSubview(manualActivitySection!)
+        
+        let vStack = UIStackView()
+        vStack.axis = .vertical
+        vStack.distribution = .fillEqually
+        vStack.alignment = .center
+        
+        let icon = UIImageView(image: UIImage(systemName: "waveform.path.ecg.rectangle")?.withRenderingMode(.alwaysTemplate))
+        icon.tintColor = DefaultBlue
+        icon.contentMode = .scaleAspectFit
+        
+        let titleLabel = UILabel()
+        titleLabel.text = "Manual Activity"
+        titleLabel.textColor = DefaultTabColor
+        titleLabel.font = FontExtraTiny
+        
+        vStack.addArrangedSubview(icon)
+        vStack.addArrangedSubview(titleLabel)
+        manualActivitySection?.addSubview(vStack)
+        vStack.mas_makeConstraints { (make) in
+            make?.top.equalTo()(manualActivitySection)
+            make?.left.equalTo()(manualActivitySection)
+            make?.right.equalTo()(manualActivitySection)
+            make?.bottom.equalTo()(manualActivitySection)
+        }
+        icon.mas_makeConstraints { (make) in
+            make?.top.equalTo()(vStack)?.offset()(20)
+            make?.left.equalTo()(vStack)
+            make?.right.equalTo()(vStack)
+            make?.height.equalTo()(40)
+        }
+        titleLabel.mas_makeConstraints { (make) in
+            make?.top.equalTo()(icon.mas_bottom)
+        }
     
     }
     
@@ -58,6 +123,44 @@ class FPHomeActivitiesViewController: UIViewController {
     
     @objc func settingsBtnClicked() {
         self.navigationController?.pushViewController(FPSettingsViewController(), animated: true)
+    }
+    
+    @objc func touchHandler() {
+        self.didRotate = false
+        self.cover?.isHidden = true
+        self.addBtn?.customView?.transform = CGAffineTransform(rotationAngle: CGFloat(CGFloat.pi * 1/4))
+        UIView.animate(withDuration: 0.2) {
+            self.addBtn?.customView?.transform = .identity
+            self.manualActivitySection?.frame = CGRect(x: 0, y: GetStatusBarHeight() + (self.navigationController?.navigationBar.frame.height)! - 90, width: self.view.frame.width, height: 90)
+        } completion: { (finished) in
+            self.addButton?.setImage(UIImage(systemName: "plus.circle"), for: .normal)
+        }
+    }
+    
+    @objc func addBtnClicked() {
+        if !self.didRotate! {
+            self.didRotate = true
+            self.cover?.isHidden = false
+            self.addBtn?.customView?.transform = CGAffineTransform(rotationAngle: CGFloat(CGFloat.pi * -1/4))
+            UIView.animate(withDuration: 0.2) {
+                self.addBtn?.customView?.transform = .identity
+                self.manualActivitySection?.frame = CGRect(x: 0, y: GetStatusBarHeight() + (self.navigationController?.navigationBar.frame.height)!, width: self.view.frame.width, height: 90)
+            } completion: { (finished) in
+                self.addButton?.setImage(UIImage(systemName: "xmark"), for: .normal)
+            }
+        } else {
+            self.didRotate = false
+            self.cover?.isHidden = true
+            self.addBtn?.customView?.transform = CGAffineTransform(rotationAngle: CGFloat(CGFloat.pi * 1/4))
+            UIView.animate(withDuration: 0.2) {
+                self.addBtn?.customView?.transform = .identity
+                self.manualActivitySection?.frame = CGRect(x: 0, y: GetStatusBarHeight() + (self.navigationController?.navigationBar.frame.height)! - 90, width: self.view.frame.width, height: 90)
+            } completion: { (finished) in
+                self.addButton?.setImage(UIImage(systemName: "plus.circle"), for: .normal)
+            }
+        }
+        
+
     }
 
 }

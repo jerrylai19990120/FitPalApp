@@ -54,6 +54,8 @@
 		9298258926B47E89002C0A3F /* FPSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298258826B47E89002C0A3F /* FPSettingsCell.swift */; };
 		9298258C26B47E9F002C0A3F /* FPLogOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298258B26B47E9F002C0A3F /* FPLogOutCell.swift */; };
 		9298258F26B4820B002C0A3F /* FPSettingsCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298258E26B4820B002C0A3F /* FPSettingsCell+Ext.swift */; };
+		9298259326B48F7E002C0A3F /* FPAddFriendsViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298259226B48F7E002C0A3F /* FPAddFriendsViewController+Ext.swift */; };
+		9298259626B49217002C0A3F /* running.json in Resources */ = {isa = PBXBuildFile; fileRef = 9298259526B49217002C0A3F /* running.json */; };
 		92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734B926A87AF100C0D21F /* AppDelegate.swift */; };
 		92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BB26A87AF100C0D21F /* SceneDelegate.swift */; };
 		92A734BE26A87AF100C0D21F /* FPMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A734BD26A87AF100C0D21F /* FPMainViewController.swift */; };
@@ -120,6 +122,8 @@
 		9298258826B47E89002C0A3F /* FPSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPSettingsCell.swift; sourceTree = "<group>"; };
 		9298258B26B47E9F002C0A3F /* FPLogOutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPLogOutCell.swift; sourceTree = "<group>"; };
 		9298258E26B4820B002C0A3F /* FPSettingsCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPSettingsCell+Ext.swift"; sourceTree = "<group>"; };
+		9298259226B48F7E002C0A3F /* FPAddFriendsViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPAddFriendsViewController+Ext.swift"; sourceTree = "<group>"; };
+		9298259526B49217002C0A3F /* running.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = running.json; sourceTree = "<group>"; };
 		92A734B626A87AF100C0D21F /* FitPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A734B926A87AF100C0D21F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92A734BB26A87AF100C0D21F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -278,6 +282,7 @@
 				9298255026B224B9002C0A3F /* FPAddFriendsViewController.swift */,
 				9298255426B2F99C002C0A3F /* FPStatisticsViewController+Ext.swift */,
 				9298258526B47D88002C0A3F /* FPSettingsViewController+Ext.swift */,
+				9298259226B48F7E002C0A3F /* FPAddFriendsViewController+Ext.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 		92FEDA3526ADBB240045941D /* LottieAnimations */ = {
 			isa = PBXGroup;
 			children = (
+				9298259526B49217002C0A3F /* running.json */,
 				92FEDA3226ADB9FE0045941D /* home.json */,
 				929824CF26ADBF7B002C0A3F /* record.json */,
 				929824C826ADBF2E002C0A3F /* mineCenter.json */,
@@ -360,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9298259626B49217002C0A3F /* running.json in Resources */,
 				929824D026ADBF7B002C0A3F /* record.json in Resources */,
 				92A734C626A87AF200C0D21F /* LaunchScreen.storyboard in Resources */,
 				926E9E0226AC58D500279AB2 /* GoogleService-Info.plist in Resources */,
@@ -461,6 +468,7 @@
 				92A734BE26A87AF100C0D21F /* FPMainViewController.swift in Sources */,
 				9298257826B45573002C0A3F /* FPPersonalActivitiesView.swift in Sources */,
 				929824D326ADE0DC002C0A3F /* FPTabBar.swift in Sources */,
+				9298259326B48F7E002C0A3F /* FPAddFriendsViewController+Ext.swift in Sources */,
 				92A734BA26A87AF100C0D21F /* AppDelegate.swift in Sources */,
 				9298254E26B20FC0002C0A3F /* FPPersonalActivitiesViewController.swift in Sources */,
 				9298256726B362C2002C0A3F /* FPStatTableViewCell.swift in Sources */,
@@ -629,7 +637,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FitPal/FitPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.9;
+				CURRENT_PROJECT_VERSION = 1.0.10;
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				INFOPLIST_FILE = FitPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -651,7 +659,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FitPal/FitPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.9;
+				CURRENT_PROJECT_VERSION = 1.0.10;
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				INFOPLIST_FILE = FitPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
