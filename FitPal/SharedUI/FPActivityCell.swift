@@ -47,7 +47,7 @@ class FPActivityCell: UICollectionViewCell {
             make?.top.equalTo()(self.contentView)?.offset()(16)
             make?.left.equalTo()(self.contentView)?.offset()(16)
             make?.right.equalTo()(self.contentView)?.offset()(-16)
-            make?.bottom.equalTo()(self.contentView)?.offset()(-60)
+            make?.height.equalTo()(UIScreen.main.bounds.height * 0.18)
         }
         
         let hStack = UIStackView()
@@ -133,9 +133,12 @@ class FPActivityCell: UICollectionViewCell {
         map?.isScrollEnabled = false
         map?.isZoomEnabled = false
         map?.delegate = self
-        vStackLayout.addArrangedSubview(map!)
+        //vStackLayout.addArrangedSubview(map!)
+        self.addSubview(map!)
         map?.mas_makeConstraints({ (make) in
-            make?.width.equalTo()(UIScreen.main.bounds.width)
+            make?.top.equalTo()(vStackLayout.mas_bottom)?.offset()(10)
+            make?.left.equalTo()(self.contentView)
+            make?.right.equalTo()(self.contentView)
             make?.height.equalTo()(UIScreen.main.bounds.height * 0.26)
         })
         
@@ -144,7 +147,7 @@ class FPActivityCell: UICollectionViewCell {
         bottomBar.mas_makeConstraints { (make) in
             make?.left.equalTo()(self.contentView)
             make?.right.equalTo()(self.contentView)
-            make?.top.equalTo()(vStackLayout.mas_bottom)
+            make?.top.equalTo()(map?.mas_bottom)
             make?.height.equalTo()(60)
         }
     }

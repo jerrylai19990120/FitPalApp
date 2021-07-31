@@ -11,7 +11,7 @@ import UIKit
 extension FPHomeActivitiesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height * 0.66)
+        return CGSize(width: collectionView.frame.width, height: UIScreen.main.bounds.height * 0.44 + 86)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
