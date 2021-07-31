@@ -13,10 +13,21 @@ class FPAddFriendsViewController: UIViewController {
     var searchField: FPTextField?
     var collectionView: UICollectionView?
     var results = [String]()
+    var animationView: AnimationView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        animationView?.play()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        animationView?.stop()
     }
     
     func setupViews() {
@@ -46,17 +57,16 @@ class FPAddFriendsViewController: UIViewController {
             make?.height.equalTo()(40)
         })
         
-        let animationView = AnimationView(animation: Animation.named("running"))
-        animationView.isUserInteractionEnabled = false
-        animationView.loopMode = .loop
-        self.view.addSubview(animationView)
-        animationView.mas_makeConstraints { (make) in
+        animationView = AnimationView(animation: Animation.named("running"))
+        animationView?.isUserInteractionEnabled = false
+        animationView?.loopMode = .loop
+        self.view.addSubview(animationView!)
+        animationView?.mas_makeConstraints { (make) in
             make?.centerX.equalTo()(self.view.mas_centerX)
             make?.centerY.equalTo()(self.view.mas_centerY)
             make?.width.equalTo()(self.view.frame.width * 0.5)
             make?.height.equalTo()(self.view.frame.width * 0.5)
         }
-        animationView.play()
         
         let label = UILabel()
         label.text = "Find your friends on FitPal"
@@ -64,7 +74,7 @@ class FPAddFriendsViewController: UIViewController {
         label.font = FontMain
         self.view.addSubview(label)
         label.mas_makeConstraints { (make) in
-            make?.top.equalTo()(animationView.mas_bottom)?.offset()(16)
+            make?.top.equalTo()(animationView?.mas_bottom)?.offset()(16)
             make?.centerX.equalTo()(self.view.mas_centerX)
         }
         
@@ -85,11 +95,11 @@ class FPAddFriendsViewController: UIViewController {
         
         if results.count == 0 {
             collectionView?.isHidden = true
-            animationView.isHidden = false
+            animationView?.isHidden = false
             label.isHidden = false
         } else {
             collectionView?.isHidden = false
-            animationView.isHidden = true
+            animationView?.isHidden = true
             label.isHidden = true
         }
         
