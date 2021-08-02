@@ -71,4 +71,12 @@ extension FPSettingsViewController: UICollectionViewDelegate, UICollectionViewDa
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 1 && indexPath.row == 0 {
+            let mainVC = FPMainViewController()
+            mainVC.modalPresentationStyle = .fullScreen
+            self.present(mainVC, animated: true, completion: nil)
+        }
+    }
+    
 }
