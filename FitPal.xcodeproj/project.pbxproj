@@ -14,6 +14,8 @@
 		920257F826B98750008C9D83 /* FPChangeEmailViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920257F726B98750008C9D83 /* FPChangeEmailViewController+Ext.swift */; };
 		920257FB26B988C3008C9D83 /* FPExerciseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920257FA26B988C3008C9D83 /* FPExerciseDetailViewController.swift */; };
 		920257FE26B98930008C9D83 /* FPConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920257FD26B98930008C9D83 /* FPConnectionsViewController.swift */; };
+		9202580126B9A81C008C9D83 /* FPAddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9202580026B9A81C008C9D83 /* FPAddActivityViewController.swift */; };
+		9202580426B9AB04008C9D83 /* FPEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9202580326B9AB04008C9D83 /* FPEditProfileViewController.swift */; };
 		920ED9F026AB03B600E2A19A /* FPUIDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9EF26AB03B600E2A19A /* FPUIDefinitions.swift */; };
 		920ED9F926AB107A00E2A19A /* FPMainViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9F826AB107A00E2A19A /* FPMainViewController+Extension.swift */; };
 		920EDA0026AB1B9A00E2A19A /* FPBackgroundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9FF26AB1B9A00E2A19A /* FPBackgroundCell.swift */; };
@@ -89,6 +91,8 @@
 		920257F726B98750008C9D83 /* FPChangeEmailViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPChangeEmailViewController+Ext.swift"; sourceTree = "<group>"; };
 		920257FA26B988C3008C9D83 /* FPExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPExerciseDetailViewController.swift; sourceTree = "<group>"; };
 		920257FD26B98930008C9D83 /* FPConnectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPConnectionsViewController.swift; sourceTree = "<group>"; };
+		9202580026B9A81C008C9D83 /* FPAddActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPAddActivityViewController.swift; sourceTree = "<group>"; };
+		9202580326B9AB04008C9D83 /* FPEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPEditProfileViewController.swift; sourceTree = "<group>"; };
 		920ED9EF26AB03B600E2A19A /* FPUIDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPUIDefinitions.swift; sourceTree = "<group>"; };
 		920ED9F826AB107A00E2A19A /* FPMainViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPMainViewController+Extension.swift"; sourceTree = "<group>"; };
 		920ED9FF26AB1B9A00E2A19A /* FPBackgroundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPBackgroundCell.swift; sourceTree = "<group>"; };
@@ -304,6 +308,8 @@
 				920257F726B98750008C9D83 /* FPChangeEmailViewController+Ext.swift */,
 				920257FA26B988C3008C9D83 /* FPExerciseDetailViewController.swift */,
 				920257FD26B98930008C9D83 /* FPConnectionsViewController.swift */,
+				9202580026B9A81C008C9D83 /* FPAddActivityViewController.swift */,
+				9202580326B9AB04008C9D83 /* FPEditProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -466,6 +472,7 @@
 				9298255126B224B9002C0A3F /* FPAddFriendsViewController.swift in Sources */,
 				9298256B26B36B22002C0A3F /* FPYearlyStatCell+Ext.swift in Sources */,
 				929824DD26AF1818002C0A3F /* FPRecordViewController+MapExt.swift in Sources */,
+				9202580426B9AB04008C9D83 /* FPEditProfileViewController.swift in Sources */,
 				929824FD26B082DD002C0A3F /* FPStatusCell.swift in Sources */,
 				920257F526B97E9F008C9D83 /* FPPasswordCell.swift in Sources */,
 				9298257B26B455C7002C0A3F /* FPMineInfoView.swift in Sources */,
@@ -510,6 +517,7 @@
 				929824E526AF86BE002C0A3F /* FPHomeActivitiesViewController+Ext.swift in Sources */,
 				92FEDA0C26ADAE870045941D /* FPFitnessCenterViewController.swift in Sources */,
 				9298255B26B2FB0B002C0A3F /* FPYearlyStatCell.swift in Sources */,
+				9202580126B9A81C008C9D83 /* FPAddActivityViewController.swift in Sources */,
 				920257F826B98750008C9D83 /* FPChangeEmailViewController+Ext.swift in Sources */,
 				920257FB26B988C3008C9D83 /* FPExerciseDetailViewController.swift in Sources */,
 				929824FA26B082C2002C0A3F /* FPProfileCell.swift in Sources */,

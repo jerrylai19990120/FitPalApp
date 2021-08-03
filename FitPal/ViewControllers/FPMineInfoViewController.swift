@@ -37,6 +37,7 @@ class FPMineInfoViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(profileTabBarButtonClicked(notif:)), name: NSNotification.Name("ProfileTabButtonClicked"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(connectionsBtnHandler(notif:)), name: NSNotification.Name("FollowerBtnClicked"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(connectionsBtnHandler(notif:)), name: NSNotification.Name("FollowingBtnClicked"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(editBtnHandler(notif:)), name: Notification.Name("EditProfileClicked"), object: nil)
     }
     
     func setupViews() {
@@ -128,6 +129,10 @@ class FPMineInfoViewController: UIViewController {
         } else if notif.name.rawValue == "FollowingBtnClicked" {
             self.navigationController?.pushViewController(FPConnectionsViewController(), animated: true)
         }
+    }
+    
+    @objc func editBtnHandler(notif: Notification) {
+        self.navigationController?.pushViewController(FPEditProfileViewController(), animated: true)
     }
     
 }

@@ -100,6 +100,7 @@ class FPProfileCell: UICollectionViewCell {
         followerStack.addArrangedSubview(followerNum)
         
         let editBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithBorderBlueTextBlue, text: "Edit Profile", icon: nil)
+        editBtn.addTarget(self, action: #selector(editBtnClicked), for: .touchUpInside)
         
         hStack.addArrangedSubview(followingStack)
         hStack.addArrangedSubview(separator)
@@ -133,6 +134,10 @@ class FPProfileCell: UICollectionViewCell {
     
     @objc func followingStackClicked() {
         NotificationCenter.default.post(name: Notification.Name("FollowingBtnClicked"), object: nil)
+    }
+    
+    @objc func editBtnClicked() {
+        NotificationCenter.default.post(name: Notification.Name("EditProfileClicked"), object: nil)
     }
     
 }

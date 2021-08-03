@@ -115,7 +115,17 @@ class FPHomeActivitiesViewController: UIViewController {
         titleLabel.mas_makeConstraints { (make) in
             make?.top.equalTo()(icon.mas_bottom)
         }
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(addActivityBtnClicked))
+        tap.numberOfTapsRequired = 1
+        vStack.addGestureRecognizer(tap)
     
+    }
+    
+    @objc func addActivityBtnClicked() {
+        let addActivityVC = FPAddActivityViewController()
+        addActivityVC.modalTransitionStyle = .coverVertical
+        self.navigationController?.pushViewController(addActivityVC, animated: true)
     }
     
     @objc func friendBtnClicked() {
