@@ -76,6 +76,7 @@ class FPActivityCell: UICollectionViewCell {
         vStack.addArrangedSubview(timeLabel!)
         
         let moreBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithOnlyIcon, text: nil, icon: UIImage(systemName: "ellipsis"))
+        moreBtn.addTarget(self, action: #selector(moreBtnClicked), for: .touchUpInside)
         
         hStack.addArrangedSubview(avatarView)
         hStack.addArrangedSubview(vStack)
@@ -157,6 +158,10 @@ class FPActivityCell: UICollectionViewCell {
     }
     
     func configureCell() {
+        
+    }
+    
+    @objc func moreBtnClicked() {
         
     }
     

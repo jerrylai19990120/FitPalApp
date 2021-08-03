@@ -14,6 +14,7 @@ class FPSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
+        self.addObservers()
     }
     
     func setupViews() {
@@ -38,6 +39,19 @@ class FPSettingsViewController: UIViewController {
             make?.right.equalTo()(self.view)
             make?.bottom.equalTo()(self.view)
         })
+    }
+    
+    func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(changePasswordHandler(notif:)), name: NSNotification.Name("ChangePasswordClicked"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(changeEmailHandler(notif:)), name: NSNotification.Name("ChangeEmailClicked"), object: nil)
+    }
+    
+    @objc func changePasswordHandler(notif: Notification) {
+        self.navigationController?.pushViewController(FPChangePasswordViewController(), animated: true)
+    }
+    
+    @objc func changeEmailHandler(notif: Notification) {
+        self.navigationController?.pushViewController(FPChangeEmailViewController(), animated: true)
     }
 
 }

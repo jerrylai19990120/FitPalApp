@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920257EC26B84713008C9D83 /* FPChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920257EB26B84713008C9D83 /* FPChangePasswordViewController.swift */; };
+		920257EF26B84724008C9D83 /* FPChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920257EE26B84724008C9D83 /* FPChangeEmailViewController.swift */; };
+		920257F226B97E52008C9D83 /* FPChangePasswordViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920257F126B97E52008C9D83 /* FPChangePasswordViewController+Ext.swift */; };
+		920257F526B97E9F008C9D83 /* FPPasswordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920257F426B97E9F008C9D83 /* FPPasswordCell.swift */; };
+		920257F826B98750008C9D83 /* FPChangeEmailViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920257F726B98750008C9D83 /* FPChangeEmailViewController+Ext.swift */; };
+		920257FB26B988C3008C9D83 /* FPExerciseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920257FA26B988C3008C9D83 /* FPExerciseDetailViewController.swift */; };
+		920257FE26B98930008C9D83 /* FPConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920257FD26B98930008C9D83 /* FPConnectionsViewController.swift */; };
 		920ED9F026AB03B600E2A19A /* FPUIDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9EF26AB03B600E2A19A /* FPUIDefinitions.swift */; };
 		920ED9F926AB107A00E2A19A /* FPMainViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9F826AB107A00E2A19A /* FPMainViewController+Extension.swift */; };
 		920EDA0026AB1B9A00E2A19A /* FPBackgroundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9FF26AB1B9A00E2A19A /* FPBackgroundCell.swift */; };
@@ -75,6 +82,13 @@
 		561CBDED8F2422985CBF32E2 /* Pods-FitPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPal.debug.xcconfig"; path = "Target Support Files/Pods-FitPal/Pods-FitPal.debug.xcconfig"; sourceTree = "<group>"; };
 		6840FB4C271F5F6838B9D934 /* Pods-FitPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitPal.release.xcconfig"; path = "Target Support Files/Pods-FitPal/Pods-FitPal.release.xcconfig"; sourceTree = "<group>"; };
 		83E11270F72B689F971BC3E0 /* Pods_FitPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		920257EB26B84713008C9D83 /* FPChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPChangePasswordViewController.swift; sourceTree = "<group>"; };
+		920257EE26B84724008C9D83 /* FPChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPChangeEmailViewController.swift; sourceTree = "<group>"; };
+		920257F126B97E52008C9D83 /* FPChangePasswordViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPChangePasswordViewController+Ext.swift"; sourceTree = "<group>"; };
+		920257F426B97E9F008C9D83 /* FPPasswordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPPasswordCell.swift; sourceTree = "<group>"; };
+		920257F726B98750008C9D83 /* FPChangeEmailViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPChangeEmailViewController+Ext.swift"; sourceTree = "<group>"; };
+		920257FA26B988C3008C9D83 /* FPExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPExerciseDetailViewController.swift; sourceTree = "<group>"; };
+		920257FD26B98930008C9D83 /* FPConnectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPConnectionsViewController.swift; sourceTree = "<group>"; };
 		920ED9EF26AB03B600E2A19A /* FPUIDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPUIDefinitions.swift; sourceTree = "<group>"; };
 		920ED9F826AB107A00E2A19A /* FPMainViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPMainViewController+Extension.swift"; sourceTree = "<group>"; };
 		920ED9FF26AB1B9A00E2A19A /* FPBackgroundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPBackgroundCell.swift; sourceTree = "<group>"; };
@@ -218,6 +232,7 @@
 				9298258826B47E89002C0A3F /* FPSettingsCell.swift */,
 				9298258B26B47E9F002C0A3F /* FPLogOutCell.swift */,
 				9298258E26B4820B002C0A3F /* FPSettingsCell+Ext.swift */,
+				920257F426B97E9F008C9D83 /* FPPasswordCell.swift */,
 			);
 			path = SharedUI;
 			sourceTree = "<group>";
@@ -283,6 +298,12 @@
 				9298255426B2F99C002C0A3F /* FPStatisticsViewController+Ext.swift */,
 				9298258526B47D88002C0A3F /* FPSettingsViewController+Ext.swift */,
 				9298259226B48F7E002C0A3F /* FPAddFriendsViewController+Ext.swift */,
+				920257EB26B84713008C9D83 /* FPChangePasswordViewController.swift */,
+				920257EE26B84724008C9D83 /* FPChangeEmailViewController.swift */,
+				920257F126B97E52008C9D83 /* FPChangePasswordViewController+Ext.swift */,
+				920257F726B98750008C9D83 /* FPChangeEmailViewController+Ext.swift */,
+				920257FA26B988C3008C9D83 /* FPExerciseDetailViewController.swift */,
+				920257FD26B98930008C9D83 /* FPConnectionsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -446,14 +467,18 @@
 				9298256B26B36B22002C0A3F /* FPYearlyStatCell+Ext.swift in Sources */,
 				929824DD26AF1818002C0A3F /* FPRecordViewController+MapExt.swift in Sources */,
 				929824FD26B082DD002C0A3F /* FPStatusCell.swift in Sources */,
+				920257F526B97E9F008C9D83 /* FPPasswordCell.swift in Sources */,
 				9298257B26B455C7002C0A3F /* FPMineInfoView.swift in Sources */,
 				929824DA26AF1216002C0A3F /* FPMineInfoViewController.swift in Sources */,
+				920257FE26B98930008C9D83 /* FPConnectionsViewController.swift in Sources */,
 				9298256426B361E7002C0A3F /* FPAvgStatCell+Ext.swift in Sources */,
 				929824E826B04091002C0A3F /* FPFeedStatusView.swift in Sources */,
 				9298257526B44D6A002C0A3F /* FPTextField.swift in Sources */,
 				92FEDA1826ADB0E50045941D /* FPFitnessCenterViewController+Ext.swift in Sources */,
 				920ED9F026AB03B600E2A19A /* FPUIDefinitions.swift in Sources */,
+				920257EC26B84713008C9D83 /* FPChangePasswordViewController.swift in Sources */,
 				9298257E26B45C28002C0A3F /* FPPersonalActivitiesView+Ext.swift in Sources */,
+				920257EF26B84724008C9D83 /* FPChangeEmailViewController.swift in Sources */,
 				929824E226AF8666002C0A3F /* FPActivityCell.swift in Sources */,
 				920EDA0026AB1B9A00E2A19A /* FPBackgroundCell.swift in Sources */,
 				920EDA0E26AB6E5C00E2A19A /* FPButtonFactory.swift in Sources */,
@@ -481,9 +506,12 @@
 				92A734BC26A87AF100C0D21F /* SceneDelegate.swift in Sources */,
 				9298256E26B36BBC002C0A3F /* FPAllTimeStatCell+Ext.swift in Sources */,
 				920EDA0326AB591900E2A19A /* FPStatusBarHelper.swift in Sources */,
+				920257F226B97E52008C9D83 /* FPChangePasswordViewController+Ext.swift in Sources */,
 				929824E526AF86BE002C0A3F /* FPHomeActivitiesViewController+Ext.swift in Sources */,
 				92FEDA0C26ADAE870045941D /* FPFitnessCenterViewController.swift in Sources */,
 				9298255B26B2FB0B002C0A3F /* FPYearlyStatCell.swift in Sources */,
+				920257F826B98750008C9D83 /* FPChangeEmailViewController+Ext.swift in Sources */,
+				920257FB26B988C3008C9D83 /* FPExerciseDetailViewController.swift in Sources */,
 				929824FA26B082C2002C0A3F /* FPProfileCell.swift in Sources */,
 				926E9E2B26AC634D00279AB2 /* FPLoginViewController.swift in Sources */,
 				929824F326B0605C002C0A3F /* FPMineCenterTopBar.swift in Sources */,

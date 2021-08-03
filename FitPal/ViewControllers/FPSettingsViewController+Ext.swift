@@ -55,7 +55,7 @@ extension FPSettingsViewController: UICollectionViewDelegate, UICollectionViewDa
         switch indexPath.section {
         case 0:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FPSettingsCell.identifier, for: indexPath) as? FPSettingsCell {
-                cell.isUserInteractionEnabled = false
+                cell.contentView.isUserInteractionEnabled = false
                 return cell
             } else {
                 return UICollectionViewCell()
