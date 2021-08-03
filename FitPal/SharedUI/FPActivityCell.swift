@@ -162,7 +162,7 @@ class FPActivityCell: UICollectionViewCell {
     }
     
     @objc func moreBtnClicked() {
-        
+        NotificationCenter.default.post(name: Notification.Name("ExerciseDetail"), object: nil)
     }
     
 }

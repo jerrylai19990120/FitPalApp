@@ -11,6 +11,7 @@ class FPFeedBottomBar: UIStackView {
     
     var likeBtn: FPButton?
     var commentBtn: FPButton?
+    var didLike: Bool?
 
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -22,11 +23,13 @@ class FPFeedBottomBar: UIStackView {
     }
     
     func setupViews() {
+        self.didLike = false
         self.axis = .horizontal
         self.alignment = .center
         self.distribution = .fillProportionally
         self.backgroundColor = LabelBgColor
         likeBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithOnlyIcon, text: nil, icon: UIImage(systemName: "hand.thumbsup"))
+        likeBtn?.addTarget(self, action: #selector(likeBtnClicked), for: .touchUpInside)
         commentBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithOnlyIcon, text: nil, icon: UIImage(systemName: "text.bubble"))
         
         let separator = FPVerticalLine()
@@ -37,6 +40,16 @@ class FPFeedBottomBar: UIStackView {
         separator.mas_makeConstraints { (make) in
             make?.width.equalTo()(1)
             make?.height.equalTo()(26)
+        }
+    }
+    
+    @objc func likeBtnClicked() {
+        if self.didLike! {
+            self.didLike = false
+            likeBtn?.setImage(UIImage(systemName: "hand.thumbsup"), for: .normal)
+        } else {
+            self.didLike = true
+            likeBtn?.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .normal)
         }
     }
 }

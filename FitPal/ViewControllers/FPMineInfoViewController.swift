@@ -35,6 +35,8 @@ class FPMineInfoViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(activitiesTabBarButtonClicked(notif:)), name: NSNotification.Name("ActivitiesTabButtonTabClicked"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(profileTabBarButtonClicked(notif:)), name: NSNotification.Name("ProfileTabButtonClicked"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(connectionsBtnHandler(notif:)), name: NSNotification.Name("FollowerBtnClicked"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(connectionsBtnHandler(notif:)), name: NSNotification.Name("FollowingBtnClicked"), object: nil)
     }
     
     func setupViews() {
@@ -98,6 +100,8 @@ class FPMineInfoViewController: UIViewController {
     }
     
     @objc func activitiesTabBarButtonClicked(notif: Notification) {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("ExerciseDetail"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(exerciseDetailHandler(notif:)), name: Notification.Name("ExerciseDetail"), object: nil)
         self.selection = .activitiesSelection
         UIView.animate(withDuration: 0.2) {
             self.mineInfoView?.frame = CGRect(x: self.view.frame.width, y: self.mineInfoY!, width: self.view.frame.width, height: self.view.frame.height - self.mineInfoY!)
@@ -106,10 +110,23 @@ class FPMineInfoViewController: UIViewController {
     }
     
     @objc func profileTabBarButtonClicked(notif: Notification) {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("ExerciseDetail"), object: nil)
         self.selection = .profileSelection
         UIView.animate(withDuration: 0.2) {
             self.mineInfoView?.frame = CGRect(x: 0, y: self.mineInfoY!, width: self.view.frame.width, height: self.view.frame.height - self.mineInfoY!)
             self.activitiesView?.frame = CGRect(x: -self.view.frame.width, y: self.activitiesY!, width: self.view.frame.width, height: self.view.frame.height - self.activitiesY!)
+        }
+    }
+    
+    @objc func exerciseDetailHandler(notif: Notification) {
+        self.navigationController?.pushViewController(FPExerciseDetailViewController(), animated: true)
+    }
+    
+    @objc func connectionsBtnHandler(notif: Notification) {
+        if notif.name.rawValue == "FollowerBtnClicked" {
+            self.navigationController?.pushViewController(FPConnectionsViewController(), animated: true)
+        } else if notif.name.rawValue == "FollowingBtnClicked" {
+            self.navigationController?.pushViewController(FPConnectionsViewController(), animated: true)
         }
     }
     

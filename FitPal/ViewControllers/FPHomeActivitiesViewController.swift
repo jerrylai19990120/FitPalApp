@@ -21,6 +21,7 @@ class FPHomeActivitiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViews()
+        self.addObservers()
     }
     
     func setupViews() {
@@ -159,8 +160,15 @@ class FPHomeActivitiesViewController: UIViewController {
                 self.addButton?.setImage(UIImage(systemName: "plus.circle"), for: .normal)
             }
         }
-        
 
+    }
+    
+    func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(exerciseDetailHandler(notif:)), name: Notification.Name("ExerciseDetail"), object: nil)
+    }
+    
+    @objc func exerciseDetailHandler(notif: Notification) {
+        self.navigationController?.pushViewController(FPExerciseDetailViewController(), animated: true)
     }
 
 }

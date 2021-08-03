@@ -116,6 +116,23 @@ class FPProfileCell: UICollectionViewCell {
             make?.width.equalTo()(2)
         }
         
+        let followerTouch = UITapGestureRecognizer(target: self, action: #selector(followerStackClicked))
+        followerTouch.numberOfTapsRequired = 1
+        
+        let followingTouch = UITapGestureRecognizer(target: self, action: #selector(followingStackClicked))
+        followingTouch.numberOfTapsRequired = 1
+        
+        followerStack.addGestureRecognizer(followerTouch)
+        followingStack.addGestureRecognizer(followingTouch)
+        
+    }
+    
+    @objc func followerStackClicked() {
+        NotificationCenter.default.post(name: Notification.Name("FollowerBtnClicked"), object: nil)
+    }
+    
+    @objc func followingStackClicked() {
+        NotificationCenter.default.post(name: Notification.Name("FollowingBtnClicked"), object: nil)
     }
     
 }
