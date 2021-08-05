@@ -20,7 +20,7 @@ class FPEditProfileViewController: UIViewController {
     func setupViews() {
         self.view.backgroundColor = DefaultLightGray
         self.navigationController?.navigationBar.barTintColor = DefaultWhite
-        self.navigationItem.title = "Add Activity"
+        self.navigationItem.title = "Profile"
         
         cancelBtn = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelBtnPressed))
         self.navigationItem.leftBarButtonItem = cancelBtn

@@ -8,15 +8,15 @@
 import UIKit
 
 enum FPMineInfoSelection {
-    case activitiesSelection
-    case profileSelection
+    case firstSelection
+    case secondSelection
 }
 
 class FPMineInfoViewController: UIViewController {
     
     var friendBtn: UIBarButtonItem?
     var settingsBtn: UIBarButtonItem?
-    var selection: FPMineInfoSelection = .profileSelection
+    var selection: FPMineInfoSelection = .secondSelection
     var mineInfoView: FPMineInfoView?
     var activitiesView: FPPersonalActivitiesView?
     var mineInfoY: CGFloat?
@@ -50,7 +50,7 @@ class FPMineInfoViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = friendBtn
         self.navigationItem.rightBarButtonItem = settingsBtn
         
-        let topBar = FPMineCenterTopBar(selection: selection)
+        let topBar = FPTopBar(selection: selection, tabOneTitle: "Activities", tabTwoTitle: "Profile")
         self.view.addSubview(topBar)
         topBar.mas_makeConstraints { (make) in
             make?.top.equalTo()(self.view)?.offset()(GetStatusBarHeight() + (navigationController?.navigationBar.frame.height)!)
@@ -68,11 +68,11 @@ class FPMineInfoViewController: UIViewController {
         self.view.addSubview(activitiesView!)
         
         switch selection {
-        case .activitiesSelection:
+        case .firstSelection:
             mineInfoView?.frame = CGRect(x: self.view.frame.width, y: mineInfoY!, width: self.view.frame.width, height: self.view.frame.height - mineInfoY!)
             activitiesView?.frame = CGRect(x: 0, y: activitiesY!, width: self.view.frame.width, height: self.view.frame.height - activitiesY!)
             break
-        case .profileSelection:
+        case .secondSelection:
             mineInfoView?.frame = CGRect(x: 0, y: mineInfoY!, width: self.view.frame.width, height: self.view.frame.height - mineInfoY!)
             activitiesView?.frame = CGRect(x: -self.view.frame.width, y: activitiesY!, width: self.view.frame.width, height: self.view.frame.height - activitiesY!)
             break
@@ -103,7 +103,7 @@ class FPMineInfoViewController: UIViewController {
     @objc func activitiesTabBarButtonClicked(notif: Notification) {
         NotificationCenter.default.removeObserver(self, name: Notification.Name("ExerciseDetail"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(exerciseDetailHandler(notif:)), name: Notification.Name("ExerciseDetail"), object: nil)
-        self.selection = .activitiesSelection
+        self.selection = .firstSelection
         UIView.animate(withDuration: 0.2) {
             self.mineInfoView?.frame = CGRect(x: self.view.frame.width, y: self.mineInfoY!, width: self.view.frame.width, height: self.view.frame.height - self.mineInfoY!)
             self.activitiesView?.frame = CGRect(x: 0, y: self.activitiesY!, width: self.view.frame.width, height: self.view.frame.height - self.activitiesY!)
@@ -112,7 +112,7 @@ class FPMineInfoViewController: UIViewController {
     
     @objc func profileTabBarButtonClicked(notif: Notification) {
         NotificationCenter.default.removeObserver(self, name: Notification.Name("ExerciseDetail"), object: nil)
-        self.selection = .profileSelection
+        self.selection = .secondSelection
         UIView.animate(withDuration: 0.2) {
             self.mineInfoView?.frame = CGRect(x: 0, y: self.mineInfoY!, width: self.view.frame.width, height: self.view.frame.height - self.mineInfoY!)
             self.activitiesView?.frame = CGRect(x: -self.view.frame.width, y: self.activitiesY!, width: self.view.frame.width, height: self.view.frame.height - self.activitiesY!)

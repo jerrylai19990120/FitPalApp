@@ -35,7 +35,7 @@
 		929824E826B04091002C0A3F /* FPFeedStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824E726B04091002C0A3F /* FPFeedStatusView.swift */; };
 		929824EB26B04F1B002C0A3F /* FPVerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824EA26B04F1B002C0A3F /* FPVerticalLine.swift */; };
 		929824EE26B05226002C0A3F /* FPFeedBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824ED26B05226002C0A3F /* FPFeedBottomBar.swift */; };
-		929824F326B0605C002C0A3F /* FPMineCenterTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824F226B0605C002C0A3F /* FPMineCenterTopBar.swift */; };
+		929824F326B0605C002C0A3F /* FPTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824F226B0605C002C0A3F /* FPTopBar.swift */; };
 		929824FA26B082C2002C0A3F /* FPProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824F926B082C2002C0A3F /* FPProfileCell.swift */; };
 		929824FD26B082DD002C0A3F /* FPStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824FC26B082DD002C0A3F /* FPStatusCell.swift */; };
 		9298250026B082FE002C0A3F /* FPWeeklyStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929824FF26B082FE002C0A3F /* FPWeeklyStatusCell.swift */; };
@@ -112,7 +112,7 @@
 		929824E726B04091002C0A3F /* FPFeedStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFeedStatusView.swift; sourceTree = "<group>"; };
 		929824EA26B04F1B002C0A3F /* FPVerticalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPVerticalLine.swift; sourceTree = "<group>"; };
 		929824ED26B05226002C0A3F /* FPFeedBottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFeedBottomBar.swift; sourceTree = "<group>"; };
-		929824F226B0605C002C0A3F /* FPMineCenterTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPMineCenterTopBar.swift; sourceTree = "<group>"; };
+		929824F226B0605C002C0A3F /* FPTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPTopBar.swift; sourceTree = "<group>"; };
 		929824F926B082C2002C0A3F /* FPProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPProfileCell.swift; sourceTree = "<group>"; };
 		929824FC26B082DD002C0A3F /* FPStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPStatusCell.swift; sourceTree = "<group>"; };
 		929824FF26B082FE002C0A3F /* FPWeeklyStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPWeeklyStatusCell.swift; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 				929824E726B04091002C0A3F /* FPFeedStatusView.swift */,
 				929824EA26B04F1B002C0A3F /* FPVerticalLine.swift */,
 				929824ED26B05226002C0A3F /* FPFeedBottomBar.swift */,
-				929824F226B0605C002C0A3F /* FPMineCenterTopBar.swift */,
+				929824F226B0605C002C0A3F /* FPTopBar.swift */,
 				929824F926B082C2002C0A3F /* FPProfileCell.swift */,
 				929824FC26B082DD002C0A3F /* FPStatusCell.swift */,
 				929824FF26B082FE002C0A3F /* FPWeeklyStatusCell.swift */,
@@ -522,7 +522,7 @@
 				920257FB26B988C3008C9D83 /* FPExerciseDetailViewController.swift in Sources */,
 				929824FA26B082C2002C0A3F /* FPProfileCell.swift in Sources */,
 				926E9E2B26AC634D00279AB2 /* FPLoginViewController.swift in Sources */,
-				929824F326B0605C002C0A3F /* FPMineCenterTopBar.swift in Sources */,
+				929824F326B0605C002C0A3F /* FPTopBar.swift in Sources */,
 				920EDA1126AB705C00E2A19A /* FPButton.swift in Sources */,
 				9298258C26B47E9F002C0A3F /* FPLogOutCell.swift in Sources */,
 				9298258F26B4820B002C0A3F /* FPSettingsCell+Ext.swift in Sources */,
@@ -673,7 +673,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FitPal/FitPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.12;
+				CURRENT_PROJECT_VERSION = 1.0.13;
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				INFOPLIST_FILE = FitPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -695,7 +695,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FitPal/FitPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.12;
+				CURRENT_PROJECT_VERSION = 1.0.13;
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				INFOPLIST_FILE = FitPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
