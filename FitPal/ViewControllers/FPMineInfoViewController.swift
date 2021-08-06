@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum FPMineInfoSelection {
+enum FPSelection {
     case firstSelection
     case secondSelection
 }
@@ -16,11 +16,12 @@ class FPMineInfoViewController: UIViewController {
     
     var friendBtn: UIBarButtonItem?
     var settingsBtn: UIBarButtonItem?
-    var selection: FPMineInfoSelection = .secondSelection
+    var selection: FPSelection = .secondSelection
     var mineInfoView: FPMineInfoView?
     var activitiesView: FPPersonalActivitiesView?
     var mineInfoY: CGFloat?
     var activitiesY: CGFloat?
+    var topBar: FPTopBar?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +34,6 @@ class FPMineInfoViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(statisticsTab(notif:)), name: NSNotification.Name("StatisticsTabClicked"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(settingsTab(notif:)), name: NSNotification.Name("SettingsTabClicked"), object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(activitiesTabBarButtonClicked(notif:)), name: NSNotification.Name("ActivitiesTabButtonTabClicked"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(profileTabBarButtonClicked(notif:)), name: NSNotification.Name("ProfileTabButtonClicked"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(connectionsBtnHandler(notif:)), name: NSNotification.Name("FollowerBtnClicked"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(connectionsBtnHandler(notif:)), name: NSNotification.Name("FollowingBtnClicked"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(editBtnHandler(notif:)), name: Notification.Name("EditProfileClicked"), object: nil)
@@ -50,14 +49,16 @@ class FPMineInfoViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = friendBtn
         self.navigationItem.rightBarButtonItem = settingsBtn
         
-        let topBar = FPTopBar(selection: selection, tabOneTitle: "Activities", tabTwoTitle: "Profile")
-        self.view.addSubview(topBar)
-        topBar.mas_makeConstraints { (make) in
+        topBar = FPTopBar(selection: selection, tabOneTitle: "Activities", tabTwoTitle: "Profile")
+        self.view.addSubview(topBar!)
+        topBar?.mas_makeConstraints { (make) in
             make?.top.equalTo()(self.view)?.offset()(GetStatusBarHeight() + (navigationController?.navigationBar.frame.height)!)
             make?.left.equalTo()(self.view)
             make?.right.equalTo()(self.view)
             make?.height.equalTo()(60)
         }
+        topBar?.firstTab?.addTarget(self, action: #selector(activitiesTabBarButtonClicked), for: .touchUpInside)
+        topBar?.secondTab?.addTarget(self, action: #selector(profileTabBarButtonClicked), for: .touchUpInside)
         
         mineInfoY = 63 + GetStatusBarHeight() + (self.navigationController?.navigationBar.frame.height)!
         mineInfoView = FPMineInfoView()
@@ -100,20 +101,23 @@ class FPMineInfoViewController: UIViewController {
         self.navigationController?.pushViewController(FPSettingsViewController(), animated: true)
     }
     
-    @objc func activitiesTabBarButtonClicked(notif: Notification) {
+    @objc func activitiesTabBarButtonClicked() {
         NotificationCenter.default.removeObserver(self, name: Notification.Name("ExerciseDetail"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(exerciseDetailHandler(notif:)), name: Notification.Name("ExerciseDetail"), object: nil)
+        
         self.selection = .firstSelection
         UIView.animate(withDuration: 0.2) {
+            self.topBar?.slidingBar?.frame = CGRect(x: 0, y: (self.topBar?.hStack?.frame.height)!, width: UIScreen.main.bounds.width / 2, height: 3)
             self.mineInfoView?.frame = CGRect(x: self.view.frame.width, y: self.mineInfoY!, width: self.view.frame.width, height: self.view.frame.height - self.mineInfoY!)
             self.activitiesView?.frame = CGRect(x: 0, y: self.activitiesY!, width: self.view.frame.width, height: self.view.frame.height - self.activitiesY!)
         }
     }
     
-    @objc func profileTabBarButtonClicked(notif: Notification) {
+    @objc func profileTabBarButtonClicked() {
         NotificationCenter.default.removeObserver(self, name: Notification.Name("ExerciseDetail"), object: nil)
         self.selection = .secondSelection
         UIView.animate(withDuration: 0.2) {
+            self.topBar?.slidingBar?.frame = CGRect(x: UIScreen.main.bounds.width / 2, y: (self.topBar?.hStack?.frame.height)!, width: UIScreen.main.bounds.width / 2, height: 3)
             self.mineInfoView?.frame = CGRect(x: 0, y: self.mineInfoY!, width: self.view.frame.width, height: self.view.frame.height - self.mineInfoY!)
             self.activitiesView?.frame = CGRect(x: -self.view.frame.width, y: self.activitiesY!, width: self.view.frame.width, height: self.view.frame.height - self.activitiesY!)
         }
@@ -125,9 +129,9 @@ class FPMineInfoViewController: UIViewController {
     
     @objc func connectionsBtnHandler(notif: Notification) {
         if notif.name.rawValue == "FollowerBtnClicked" {
-            self.navigationController?.pushViewController(FPConnectionsViewController(), animated: true)
+            self.navigationController?.pushViewController(FPConnectionsViewController(selection: .secondSelection), animated: true)
         } else if notif.name.rawValue == "FollowingBtnClicked" {
-            self.navigationController?.pushViewController(FPConnectionsViewController(), animated: true)
+            self.navigationController?.pushViewController(FPConnectionsViewController(selection: .firstSelection), animated: true)
         }
     }
     

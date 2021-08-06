@@ -14,11 +14,11 @@ class FPTopBar: UIView {
     var secondTab: FPButton?
     var hStack: UIStackView?
     var slidingBar: UIView?
-    var selection: FPMineInfoSelection?
+    var selection: FPSelection?
     var tabOneTitle: String?
     var tabTwoTitle: String?
     
-    init(selection: FPMineInfoSelection, tabOneTitle: String, tabTwoTitle: String) {
+    init(selection: FPSelection, tabOneTitle: String, tabTwoTitle: String) {
         super.init(frame: .zero)
         self.selection = selection
         self.setupViews(tabOneTitle: tabOneTitle, tabTwoTitle: tabTwoTitle)
@@ -33,6 +33,7 @@ class FPTopBar: UIView {
     }
     
     func setupViews(tabOneTitle: String, tabTwoTitle: String) {
+        self.backgroundColor = DefaultWhite
         hStack = UIStackView()
         hStack?.axis = .horizontal
         hStack?.alignment = .center
@@ -42,8 +43,6 @@ class FPTopBar: UIView {
         secondTab = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithNoBorderNoIconBlack, text: tabTwoTitle, icon: nil)
         hStack?.addArrangedSubview(firstTab!)
         hStack?.addArrangedSubview(secondTab!)
-        firstTab?.addTarget(self, action: #selector(activityBtnClicked), for: .touchUpInside)
-        secondTab?.addTarget(self, action: #selector(profileBtnClicked), for: .touchUpInside)
         
         self.addSubview(hStack!)
         hStack?.mas_makeConstraints { (make) in
@@ -66,20 +65,6 @@ class FPTopBar: UIView {
         default:
             fatalError("Error has occurred")
         }
-    }
-    
-    @objc func activityBtnClicked() {
-        UIView.animate(withDuration: 0.2) {
-            self.slidingBar?.frame = CGRect(x: 0, y: (self.hStack?.frame.height)!, width: UIScreen.main.bounds.width / 2, height: 3)
-        }
-        NotificationCenter.default.post(name: Notification.Name("ActivitiesTabButtonTabClicked"), object: nil)
-    }
-    
-    @objc func profileBtnClicked() {
-        UIView.animate(withDuration: 0.2) {
-            self.slidingBar?.frame = CGRect(x: UIScreen.main.bounds.width / 2, y: (self.hStack?.frame.height)!, width: UIScreen.main.bounds.width / 2, height: 3)
-        }
-        NotificationCenter.default.post(name: Notification.Name("ProfileTabButtonClicked"), object: nil)
     }
     
 }
