@@ -20,6 +20,8 @@
 		9202580F26BC2F6D008C9D83 /* FPHeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9202580E26BC2F6D008C9D83 /* FPHeaderTableView.swift */; };
 		9202581226BC3407008C9D83 /* FPConnectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9202581126BC3407008C9D83 /* FPConnectionsView.swift */; };
 		9202581526BC3481008C9D83 /* FPConnectionsView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9202581426BC3481008C9D83 /* FPConnectionsView+Ext.swift */; };
+		9202581926BD92C0008C9D83 /* FPEditProfileViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9202581826BD92C0008C9D83 /* FPEditProfileViewController+Ext.swift */; };
+		9202581C26BEDFE3008C9D83 /* FPBioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9202581B26BEDFE3008C9D83 /* FPBioCell.swift */; };
 		920ED9F026AB03B600E2A19A /* FPUIDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9EF26AB03B600E2A19A /* FPUIDefinitions.swift */; };
 		920ED9F926AB107A00E2A19A /* FPMainViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9F826AB107A00E2A19A /* FPMainViewController+Extension.swift */; };
 		920EDA0026AB1B9A00E2A19A /* FPBackgroundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ED9FF26AB1B9A00E2A19A /* FPBackgroundCell.swift */; };
@@ -101,6 +103,8 @@
 		9202580E26BC2F6D008C9D83 /* FPHeaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPHeaderTableView.swift; sourceTree = "<group>"; };
 		9202581126BC3407008C9D83 /* FPConnectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPConnectionsView.swift; sourceTree = "<group>"; };
 		9202581426BC3481008C9D83 /* FPConnectionsView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPConnectionsView+Ext.swift"; sourceTree = "<group>"; };
+		9202581826BD92C0008C9D83 /* FPEditProfileViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPEditProfileViewController+Ext.swift"; sourceTree = "<group>"; };
+		9202581B26BEDFE3008C9D83 /* FPBioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPBioCell.swift; sourceTree = "<group>"; };
 		920ED9EF26AB03B600E2A19A /* FPUIDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPUIDefinitions.swift; sourceTree = "<group>"; };
 		920ED9F826AB107A00E2A19A /* FPMainViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FPMainViewController+Extension.swift"; sourceTree = "<group>"; };
 		920ED9FF26AB1B9A00E2A19A /* FPBackgroundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPBackgroundCell.swift; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 				9202580E26BC2F6D008C9D83 /* FPHeaderTableView.swift */,
 				9202581126BC3407008C9D83 /* FPConnectionsView.swift */,
 				9202581426BC3481008C9D83 /* FPConnectionsView+Ext.swift */,
+				9202581B26BEDFE3008C9D83 /* FPBioCell.swift */,
 			);
 			path = SharedUI;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 				920257FD26B98930008C9D83 /* FPConnectionsViewController.swift */,
 				9202580026B9A81C008C9D83 /* FPAddActivityViewController.swift */,
 				9202580326B9AB04008C9D83 /* FPEditProfileViewController.swift */,
+				9202581826BD92C0008C9D83 /* FPEditProfileViewController+Ext.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -501,6 +507,7 @@
 				929824E226AF8666002C0A3F /* FPActivityCell.swift in Sources */,
 				920EDA0026AB1B9A00E2A19A /* FPBackgroundCell.swift in Sources */,
 				920EDA0E26AB6E5C00E2A19A /* FPButtonFactory.swift in Sources */,
+				9202581926BD92C0008C9D83 /* FPEditProfileViewController+Ext.swift in Sources */,
 				9298256126B30BD3002C0A3F /* FPHeaderCollectionView.swift in Sources */,
 				9298255826B2FAD2002C0A3F /* FPAvgStatCell.swift in Sources */,
 				9298258926B47E89002C0A3F /* FPSettingsCell.swift in Sources */,
@@ -540,6 +547,7 @@
 				920EDA1126AB705C00E2A19A /* FPButton.swift in Sources */,
 				9298258C26B47E9F002C0A3F /* FPLogOutCell.swift in Sources */,
 				9298258F26B4820B002C0A3F /* FPSettingsCell+Ext.swift in Sources */,
+				9202581C26BEDFE3008C9D83 /* FPBioCell.swift in Sources */,
 				9298250026B082FE002C0A3F /* FPWeeklyStatusCell.swift in Sources */,
 				9298250726B0BB93002C0A3F /* FPOptionCell.swift in Sources */,
 				92FEDA0326ADA3FE0045941D /* FPLoginViewController+TextFieldExt.swift in Sources */,

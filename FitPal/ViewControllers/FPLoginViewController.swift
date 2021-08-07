@@ -134,6 +134,7 @@ class FPLoginViewController: UIViewController {
         passwordField?.borderStyle = .roundedRect
         passwordField?.clearButtonMode = .whileEditing
         passwordField?.delegate = self
+        passwordField?.isSecureTextEntry = true
         
         vStackInputs?.addArrangedSubview(emailField!)
         vStackInputs?.addArrangedSubview(passwordField!)
