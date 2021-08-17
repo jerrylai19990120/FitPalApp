@@ -28,6 +28,8 @@
 		920EDA0326AB591900E2A19A /* FPStatusBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EDA0226AB591900E2A19A /* FPStatusBarHelper.swift */; };
 		920EDA0E26AB6E5C00E2A19A /* FPButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EDA0D26AB6E5C00E2A19A /* FPButtonFactory.swift */; };
 		920EDA1126AB705C00E2A19A /* FPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920EDA1026AB705C00E2A19A /* FPButton.swift */; };
+		926C4FD426CC4C8D000F611E /* FPCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C4FD326CC4C8D000F611E /* FPCommentViewController.swift */; };
+		926C4FD826CC506C000F611E /* like.json in Resources */ = {isa = PBXBuildFile; fileRef = 926C4FD726CC506C000F611E /* like.json */; };
 		926E9E0226AC58D500279AB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 926E9E0126AC58D500279AB2 /* GoogleService-Info.plist */; };
 		926E9E2B26AC634D00279AB2 /* FPLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926E9E2A26AC634D00279AB2 /* FPLoginViewController.swift */; };
 		929824C926ADBF2E002C0A3F /* mineCenter.json in Resources */ = {isa = PBXBuildFile; fileRef = 929824C826ADBF2E002C0A3F /* mineCenter.json */; };
@@ -111,6 +113,8 @@
 		920EDA0226AB591900E2A19A /* FPStatusBarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPStatusBarHelper.swift; sourceTree = "<group>"; };
 		920EDA0D26AB6E5C00E2A19A /* FPButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPButtonFactory.swift; sourceTree = "<group>"; };
 		920EDA1026AB705C00E2A19A /* FPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPButton.swift; sourceTree = "<group>"; };
+		926C4FD326CC4C8D000F611E /* FPCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPCommentViewController.swift; sourceTree = "<group>"; };
+		926C4FD726CC506C000F611E /* like.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = like.json; sourceTree = "<group>"; };
 		926E9E0126AC58D500279AB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		926E9E2A26AC634D00279AB2 /* FPLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPLoginViewController.swift; sourceTree = "<group>"; };
 		929824C826ADBF2E002C0A3F /* mineCenter.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mineCenter.json; sourceTree = "<group>"; };
@@ -328,6 +332,7 @@
 				9202580026B9A81C008C9D83 /* FPAddActivityViewController.swift */,
 				9202580326B9AB04008C9D83 /* FPEditProfileViewController.swift */,
 				9202581826BD92C0008C9D83 /* FPEditProfileViewController+Ext.swift */,
+				926C4FD326CC4C8D000F611E /* FPCommentViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				9298259526B49217002C0A3F /* running.json */,
+				926C4FD726CC506C000F611E /* like.json */,
 				92FEDA3226ADB9FE0045941D /* home.json */,
 				929824CF26ADBF7B002C0A3F /* record.json */,
 				929824C826ADBF2E002C0A3F /* mineCenter.json */,
@@ -417,6 +423,7 @@
 				926E9E0226AC58D500279AB2 /* GoogleService-Info.plist in Resources */,
 				92FEDA3326ADB9FE0045941D /* home.json in Resources */,
 				92A734C326A87AF200C0D21F /* Assets.xcassets in Resources */,
+				926C4FD826CC506C000F611E /* like.json in Resources */,
 				929824C926ADBF2E002C0A3F /* mineCenter.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +552,7 @@
 				926E9E2B26AC634D00279AB2 /* FPLoginViewController.swift in Sources */,
 				929824F326B0605C002C0A3F /* FPTopBar.swift in Sources */,
 				920EDA1126AB705C00E2A19A /* FPButton.swift in Sources */,
+				926C4FD426CC4C8D000F611E /* FPCommentViewController.swift in Sources */,
 				9298258C26B47E9F002C0A3F /* FPLogOutCell.swift in Sources */,
 				9298258F26B4820B002C0A3F /* FPSettingsCell+Ext.swift in Sources */,
 				9202581C26BEDFE3008C9D83 /* FPBioCell.swift in Sources */,
@@ -697,7 +705,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FitPal/FitPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.13;
+				CURRENT_PROJECT_VERSION = 1.0.14;
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				INFOPLIST_FILE = FitPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -719,7 +727,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FitPal/FitPal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.13;
+				CURRENT_PROJECT_VERSION = 1.0.14;
 				DEVELOPMENT_TEAM = 8L83CZ8839;
 				INFOPLIST_FILE = FitPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -175,10 +175,15 @@ class FPHomeActivitiesViewController: UIViewController {
     
     func addObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(exerciseDetailHandler(notif:)), name: Notification.Name("ExerciseDetail"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(commentBtnHandler(notif:)), name: Notification.Name("CommentBtnClicked"), object: nil)
     }
     
     @objc func exerciseDetailHandler(notif: Notification) {
         self.navigationController?.pushViewController(FPExerciseDetailViewController(), animated: true)
+    }
+    
+    @objc func commentBtnHandler(notif: Notification) {
+        self.navigationController?.pushViewController(FPCommentViewController(), animated: true)
     }
 
 }

@@ -20,6 +20,7 @@ extension FPEditProfileViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FPBioCell.identifier, for: indexPath) as? FPBioCell {
+            cell.contentView.isUserInteractionEnabled = false
             return cell
         }
         return UICollectionViewCell()

@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Lottie
 
 class FPFeedBottomBar: UIStackView {
     
-    var likeBtn: FPButton?
+    var likeBtn: AnimationView?
     var commentBtn: FPButton?
     var didLike: Bool?
 
@@ -28,15 +29,31 @@ class FPFeedBottomBar: UIStackView {
         self.alignment = .center
         self.distribution = .fillProportionally
         self.backgroundColor = LabelBgColor
-        likeBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithOnlyIcon, text: nil, icon: UIImage(systemName: "hand.thumbsup"))
-        likeBtn?.addTarget(self, action: #selector(likeBtnClicked), for: .touchUpInside)
+        
+        likeBtn = AnimationView(animation: Animation.named("like"))
+        likeBtn?.loopMode = .playOnce
+        likeBtn?.currentFrame = 0
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(likeBtnClicked))
+        tap.numberOfTapsRequired = 1
+        likeBtn?.addGestureRecognizer(tap)
+        
         commentBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithOnlyIcon, text: nil, icon: UIImage(systemName: "text.bubble"))
+        commentBtn?.addTarget(self, action: #selector(commentBtnClicked), for: .touchUpInside)
         
         let separator = FPVerticalLine()
         
         self.addArrangedSubview(likeBtn!)
         self.addArrangedSubview(separator)
         self.addArrangedSubview(commentBtn!)
+        likeBtn?.mas_makeConstraints({ (make) in
+            make?.width.equalTo()(UIScreen.main.bounds.width / 2 - 0.5)
+            make?.height.equalTo()(40)
+        })
+        commentBtn?.mas_makeConstraints({ (make) in
+            make?.width.equalTo()(UIScreen.main.bounds.width / 2 - 0.5)
+            make?.height.equalTo()(40)
+        })
         separator.mas_makeConstraints { (make) in
             make?.width.equalTo()(1)
             make?.height.equalTo()(26)
@@ -46,10 +63,14 @@ class FPFeedBottomBar: UIStackView {
     @objc func likeBtnClicked() {
         if self.didLike! {
             self.didLike = false
-            likeBtn?.setImage(UIImage(systemName: "hand.thumbsup"), for: .normal)
+            self.likeBtn?.currentProgress = 0
         } else {
             self.didLike = true
-            likeBtn?.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .normal)
+            self.likeBtn?.play()
         }
+    }
+    
+    @objc func commentBtnClicked() {
+        NotificationCenter.default.post(name: Notification.Name("CommentBtnClicked"), object: nil)
     }
 }
