@@ -96,6 +96,8 @@ class FPCommentViewController: UIViewController {
         commentField?.placeholder = "Add a comment"
         
         sendBtn = FPButtonFactory.sharedInstance.buttonWithStyle(buttonStyle: .buttonWithNoBorderNoIconBlack, text: "Send", icon: nil)
+        sendBtn?.setTitleColor(DefaultDarkGray, for: .normal)
+        sendBtn?.titleLabel?.font = FontSmallTitle
         
         inputField.addSubview(sendBtn!)
         inputField.addSubview(commentField!)
